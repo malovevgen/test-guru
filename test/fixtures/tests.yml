@@ -3,9 +3,9 @@
 one:
   title: MyString
   level: 1
-  categorie: one
+  category: one
 
 two:
   title: MyString
   level: 1
-  categorie: two
+  category: two
