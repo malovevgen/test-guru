@@ -3,9 +3,9 @@
 one:
   body: MyText
   correct: false
-  question: one
+
 
 two:
   body: MyText
   correct: false
-  question: two
+

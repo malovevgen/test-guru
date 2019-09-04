@@ -2,8 +2,7 @@
 
 one:
   body: MyText
-  test: one
 
 two:
   body: MyText
-  test: two
+
