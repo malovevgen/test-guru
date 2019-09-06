@@ -13,27 +13,27 @@ categories = Category.create!([
   ])
 
 tests = Test.create!([
-  { title: 'Module', level: 1, category_id: 1 },
-  { title: 'Methods', level: 3, category_id: 1 },
-  { title: 'Header', level: 2, category_id: 2 },
-  { title: 'Components', level: 1, category_id: 2 },
-  { title: 'Controller', level: 2, category_id: 2 }
+  { title: 'Module', level: 1, category_id: categories[0].id },
+  { title: 'Methods', level: 3, category_id: categories[0].id },
+  { title: 'Header', level: 2, category_id: categories[1].id },
+  { title: 'Components', level: 1, category_id: categories[2].id },
+  { title: 'Controller', level: 2, category_id: categories[2].id }
   ])
 
 questions = Question.create!([
-  { body: 'What method removes the last element in an array and returns it?', test_id: 2 },
-  { body: 'Which statement is used to define methods that take an unlimited number of arguments?', test_id: 2 },
-  { body: 'which ruby on rails application directory contains external modules?', test_id: 4 },
-  { body: 'Which ruby on Rails component creates the user interface?', test_id: 4 },
-  { body: 'Which group headers, apply a Content-Length?', test_id: 3 }
+  { body: 'What method removes the last element in an array and returns it?', test_id: tests[1].id },
+  { body: 'Which statement is used to define methods that take an unlimited number of arguments?', test_id: tests[1].id },
+  { body: 'which ruby on rails application directory contains external modules?', test_id: tests[3].id },
+  { body: 'Which ruby on Rails component creates the user interface?', test_id: tests[3].id },
+  { body: 'Which group headers, apply a Content-Length?', test_id: tests[2].id }
   ])
 
 answers = Answer.create!([
-  { body: 'Pop', correct: true, question_id: 1 },
-  { body: 'Splat', correct: true, question_id: 2 },
-  { body: 'lib/', correct: true, question_id: 3 },
-  { body: 'View', correct: true, question_id: 4 },
-  { body: 'Entity headers', correct: true, question_id: 5 }
+  { body: 'Pop', correct: true, question_id: questions[0].id },
+  { body: 'Splat', correct: true, question_id: questions[1].id },
+  { body: 'lib/', correct: true, question_id: questions[2].id },
+  { body: 'View', correct: true, question_id: questions[3].id },
+  { body: 'Entity headers', correct: true, question_id: questions[4].id }
   ])
 
 users = User.create!([
@@ -43,12 +43,12 @@ users = User.create!([
   ])
 
 tests_logs = TestsLog.create!([
-  { user_id: 1, test_id: 1 },
-  { user_id: 2, test_id: 1 },
-  { user_id: 1, test_id: 2 },
-  { user_id: 2, test_id: 3 },
-  { user_id: 1, test_id: 4 },
-  { user_id: 2, test_id: 5 },
-  { user_id: 3, test_id: 2 },
-  { user_id: 3, test_id: 3 }
+  { user_id: users[0].id, test_id: tests[0].id },
+  { user_id: users[0].id, test_id: tests[1].id },
+  { user_id: users[0].id, test_id: tests[2].id },
+  { user_id: users[1].id, test_id: tests[1].id },
+  { user_id: users[1].id, test_id: tests[2].id },
+  { user_id: users[2].id, test_id: tests[3].id },
+  { user_id: users[2].id, test_id: tests[4].id },
+  { user_id: users[2].id, test_id: tests[4].id }
   ])
