@@ -1,5 +1,5 @@
 class AddCategoryIdToTests < ActiveRecord::Migration[5.2]
   def change
-    add_column :tests, :category_id, :integer
+    add_reference :tests, :category, foreign_key: true
   end
 end
