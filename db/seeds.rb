@@ -5,3 +5,50 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+categories = Category.create!([
+  { title: 'Ruby' },
+  { title: 'HTTP' },
+  { title: 'Ruby on Rails' }
+  ])
+
+tests = Test.create!([
+  { title: 'Module', level: 1, category_id: categories[0].id },
+  { title: 'Methods', level: 3, category_id: categories[0].id },
+  { title: 'Header', level: 2, category_id: categories[1].id },
+  { title: 'Components', level: 1, category_id: categories[2].id },
+  { title: 'Controller', level: 2, category_id: categories[2].id }
+  ])
+
+questions = Question.create!([
+  { body: 'What method removes the last element in an array and returns it?', test_id: tests[1].id },
+  { body: 'Which statement is used to define methods that take an unlimited number of arguments?', test_id: tests[1].id },
+  { body: 'which ruby on rails application directory contains external modules?', test_id: tests[3].id },
+  { body: 'Which ruby on Rails component creates the user interface?', test_id: tests[3].id },
+  { body: 'Which group headers, apply a Content-Length?', test_id: tests[2].id }
+  ])
+
+answers = Answer.create!([
+  { body: 'Pop', correct: true, question_id: questions[0].id },
+  { body: 'Splat', correct: true, question_id: questions[1].id },
+  { body: 'lib/', correct: true, question_id: questions[2].id },
+  { body: 'View', correct: true, question_id: questions[3].id },
+  { body: 'Entity headers', correct: true, question_id: questions[4].id }
+  ])
+
+users = User.create!([
+  { name: 'Ivan'},
+  { name: 'Peter'},
+  { name: 'Sidor'}
+  ])
+
+tests_logs = TestsLog.create!([
+  { user_id: users[0].id, test_id: tests[0].id },
+  { user_id: users[0].id, test_id: tests[1].id },
+  { user_id: users[0].id, test_id: tests[2].id },
+  { user_id: users[1].id, test_id: tests[1].id },
+  { user_id: users[1].id, test_id: tests[2].id },
+  { user_id: users[2].id, test_id: tests[3].id },
+  { user_id: users[2].id, test_id: tests[4].id },
+  { user_id: users[2].id, test_id: tests[4].id }
+  ])
