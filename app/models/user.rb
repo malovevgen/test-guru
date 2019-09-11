@@ -1,6 +1,9 @@
 class User < ApplicationRecord
-  def tests_by_level(id, level)
-    Test.joins('JOIN tests_logs ON tests.id = tests_logs.test_id')
-        .where(tests_logs: { user_id: id }, tests: { level:  level })
+  has_many :test_logs, dependent: :destroy
+  has_many :tests, through: :test_logs, dependent: :nullify
+  has_many :tests_created, class_name: 'Test', foreign_key: :author_id, dependent: :nullify
+
+  def tests_by_level(level)
+    tests.where(level: level)
   end
 end
