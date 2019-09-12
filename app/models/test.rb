@@ -1,8 +1,8 @@
 class Test < ApplicationRecord
   belongs_to :category
-  has_many :question, dependent: :nullify
-  has_many :logbook, dependent: :destroy
-  has_many :user, through: :logbook, dependent: :nullify
+  has_many :questions, dependent: :nullify
+  has_many :logbooks, dependent: :destroy
+  has_many :users, through: :logbooks, dependent: :nullify
   belongs_to :author, class_name: 'User', foreign_key: :author_id
 
   def self.sort_categories(category)
