@@ -37,12 +37,12 @@ answers = Answer.create!([
   ])
 
 users = User.create!([
-  { name: 'Ivan'},
-  { name: 'Peter'},
-  { name: 'Sidor'}
+  { name: 'Ivan', email: 'ivan@rambler.hn'},
+  { name: 'Peter', email: 'peter@rambler.hn'},
+  { name: 'Sidor', email: 'sidor@rambler.hn'}
   ])
 
-tests_logs = TestsLog.create!([
+logbooks = Logbook.create!([
   { user_id: users[0].id, test_id: tests[0].id },
   { user_id: users[0].id, test_id: tests[1].id },
   { user_id: users[0].id, test_id: tests[2].id },
