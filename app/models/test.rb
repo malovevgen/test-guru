@@ -15,4 +15,6 @@ class Test < ApplicationRecord
       .order(title: :desc)
       .pluck(:title)
   }
+
+  validates :title, presence: true
 end
