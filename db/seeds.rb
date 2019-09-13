@@ -17,7 +17,10 @@ tests = Test.create!([
   { title: 'Methods', level: 3, category_id: categories[0].id },
   { title: 'Header', level: 2, category_id: categories[1].id },
   { title: 'Components', level: 1, category_id: categories[2].id },
-  { title: 'Controller', level: 2, category_id: categories[2].id }
+  { title: 'Controller', level: 2, category_id: categories[2].id },
+  { title: 'QueryInterface', level: 5, category_id: categories[2].id },
+  { title: 'Associations', level: 5, category_id: categories[2].id },
+  { title: 'ScopesValidations', level: 5, category_id: categories[2].id }
   ])
 
 questions = Question.create!([
@@ -25,7 +28,9 @@ questions = Question.create!([
   { body: 'Which statement is used to define methods that take an unlimited number of arguments?', test_id: tests[1].id },
   { body: 'which ruby on rails application directory contains external modules?', test_id: tests[3].id },
   { body: 'Which ruby on Rails component creates the user interface?', test_id: tests[3].id },
-  { body: 'Which group headers, apply a Content-Length?', test_id: tests[2].id }
+  { body: 'Which group headers, apply a Content-Length?', test_id: tests[2].id },
+  { body: 'Which objects return method "where"?', test_id: tests[5].id },
+  { body: 'What relationship requires the creation of a join table?', test_id: tests[6].id }
   ])
 
 answers = Answer.create!([
@@ -33,7 +38,11 @@ answers = Answer.create!([
   { body: 'Splat', correct: true, question_id: questions[1].id },
   { body: 'lib/', correct: true, question_id: questions[2].id },
   { body: 'View', correct: true, question_id: questions[3].id },
-  { body: 'Entity headers', correct: true, question_id: questions[4].id }
+  { body: 'Entity headers', correct: true, question_id: questions[4].id },
+  { body: 'Instance of ActiveRecord::Relation', correct: true, question_id: questions[5].id },
+  { body: 'Single instance of the model', correct: false, question_id: questions[5].id },
+  { body: 'has_many :through', correct: true, question_id: questions[6].id },
+  { body: 'has_and_belongs_to_many', correct: false, question_id: questions[6].id }
   ])
 
 users = User.create!([
