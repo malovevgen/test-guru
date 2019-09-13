@@ -12,15 +12,21 @@ categories = Category.create!([
   { title: 'Ruby on Rails' }
   ])
 
+users = User.create!([
+  { name: 'Ivan', email: 'ivan@rambler.hn'},
+  { name: 'Peter', email: 'peter@rambler.hn'},
+  { name: 'Sidor', email: 'sidor@rambler.hn'}
+  ])
+
 tests = Test.create!([
-  { title: 'Module', level: 1, category_id: categories[0].id },
-  { title: 'Methods', level: 3, category_id: categories[0].id },
-  { title: 'Header', level: 2, category_id: categories[1].id },
-  { title: 'Components', level: 1, category_id: categories[2].id },
-  { title: 'Controller', level: 2, category_id: categories[2].id },
-  { title: 'QueryInterface', level: 5, category_id: categories[2].id },
-  { title: 'Associations', level: 5, category_id: categories[2].id },
-  { title: 'ScopesValidations', level: 5, category_id: categories[2].id }
+  { title: 'Module', level: 1, category_id: categories[0].id, author_id: users[0].id },
+  { title: 'Methods', level: 3, category_id: categories[0].id, author_id: users[0].id  },
+  { title: 'Header', level: 2, category_id: categories[1].id, author_id: users[0].id  },
+  { title: 'Components', level: 1, category_id: categories[2].id, author_id: users[0].id  },
+  { title: 'Controller', level: 2, category_id: categories[2].id, author_id: users[0].id  },
+  { title: 'QueryInterface', level: 5, category_id: categories[2].id, author_id: users[0].id  },
+  { title: 'Associations', level: 5, category_id: categories[2].id, author_id: users[0].id  },
+  { title: 'ScopesValidations', level: 5, category_id: categories[2].id, author_id: users[0].id  }
   ])
 
 questions = Question.create!([
@@ -43,12 +49,6 @@ answers = Answer.create!([
   { body: 'Single instance of the model', correct: false, question_id: questions[5].id },
   { body: 'has_many :through', correct: true, question_id: questions[6].id },
   { body: 'has_and_belongs_to_many', correct: false, question_id: questions[6].id }
-  ])
-
-users = User.create!([
-  { name: 'Ivan', email: 'ivan@rambler.hn'},
-  { name: 'Peter', email: 'peter@rambler.hn'},
-  { name: 'Sidor', email: 'sidor@rambler.hn'}
   ])
 
 logbooks = Logbook.create!([
