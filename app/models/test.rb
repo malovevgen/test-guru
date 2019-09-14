@@ -5,9 +5,8 @@ class Test < ApplicationRecord
   has_many :users, through: :logbooks, dependent: :nullify
   belongs_to :author, class_name: 'User', foreign_key: :author_id
 
-  validates :title, presence: true,
-                    uniqueness: true
-
+  validates :title, presence: true
+  
   validates :level, numericality: { only_integer: true, greater_than: 0 }
 
   scope :easy, -> { where(level: 0..1) }
