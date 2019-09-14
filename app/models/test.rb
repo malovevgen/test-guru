@@ -8,12 +8,12 @@ class Test < ApplicationRecord
   scope :easy, -> { where(level: 0..1) }
   scope :medium, -> { where(level: 2..4) }
   scope :hard, -> { where(level: 5..Float::INFINITY) }
+  scope :desc_title, -> { order(title: :desc).pluck(:title) }
 
   scope :sort_by_categories, ->(category) {
     joins(:category)
       .where(categories: { title: category })
-      .order(title: :desc)
-      .pluck(:title)
+      .desc_title
   }
 
   validates :title, presence: true

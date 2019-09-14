@@ -26,7 +26,7 @@ tests = Test.create!([
   { title: 'Controller', level: 2, category_id: categories[2].id, author_id: users[0].id  },
   { title: 'QueryInterface', level: 5, category_id: categories[2].id, author_id: users[0].id  },
   { title: 'Associations', level: 5, category_id: categories[2].id, author_id: users[0].id  },
-  { title: 'ScopesValidations', level: 5, category_id: categories[2].id, author_id: users[0].id  }
+  { title: 'Validations', level: 5, category_id: categories[2].id, author_id: users[0].id  }
   ])
 
 questions = Question.create!([
