@@ -19,4 +19,8 @@ class Test < ApplicationRecord
       .where(categories: { title: category })
       .desc_title
   }
+
+  def self.sort_categories(category)
+    sort_by_categories(category)
+  end
 end
