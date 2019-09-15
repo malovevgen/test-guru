@@ -1,9 +1,9 @@
 class Test < ApplicationRecord
   belongs_to :category
+  belongs_to :author, class_name: 'User', foreign_key: :author_id  
   has_many :questions, dependent: :nullify
   has_many :logbooks, dependent: :destroy
   has_many :users, through: :logbooks, dependent: :nullify
-  belongs_to :author, class_name: 'User', foreign_key: :author_id
 
   validates :title, presence: true
   
@@ -12,7 +12,7 @@ class Test < ApplicationRecord
   scope :easy, -> { where(level: 0..1) }
   scope :medium, -> { where(level: 2..4) }
   scope :hard, -> { where(level: 5..Float::INFINITY) }
-  scope :desc_title, -> { order(title: :desc).pluck(:title) }
+  scope :desc_title, -> { order(title: :desc) }
   scope :sort_by_categories, ->(category) {
     joins(:category)
       .where(categories: { title: category })
@@ -20,6 +20,6 @@ class Test < ApplicationRecord
   }
 
   def self.sort_categories(category)
-    sort_by_categories(category)
+    sort_by_categories(category).pluck(:title)
   end
 end
