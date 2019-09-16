@@ -12,43 +12,52 @@ categories = Category.create!([
   { title: 'Ruby on Rails' }
   ])
 
+users = User.create!([
+  { name: 'Ivan', email: 'ivan@rambler.hn' },
+  { name: 'Peter', email: 'peter@rambler.hn' },
+  { name: 'Sidor', email: 'sidor@rambler.hn' }
+  ])
+
 tests = Test.create!([
-  { title: 'Module', level: 1, category_id: categories[0].id },
-  { title: 'Methods', level: 3, category_id: categories[0].id },
-  { title: 'Header', level: 2, category_id: categories[1].id },
-  { title: 'Components', level: 1, category_id: categories[2].id },
-  { title: 'Controller', level: 2, category_id: categories[2].id }
+  { title: 'Module', level: 1, category: categories[0], author: users[0] },
+  { title: 'Methods', level: 3, category: categories[0], author: users[0] },
+  { title: 'Header', level: 2, category: categories[1], author: users[0]  },
+  { title: 'Components', level: 1, category: categories[2], author: users[0] },
+  { title: 'Controller', level: 2, category: categories[2], author: users[0] },
+  { title: 'QueryInterface', level: 5, category: categories[2], author: users[0] },
+  { title: 'Associations', level: 5, category: categories[2], author: users[0] },
+  { title: 'Validations', level: 5, category: categories[2], author: users[0] }
   ])
 
 questions = Question.create!([
-  { body: 'What method removes the last element in an array and returns it?', test_id: tests[1].id },
-  { body: 'Which statement is used to define methods that take an unlimited number of arguments?', test_id: tests[1].id },
-  { body: 'which ruby on rails application directory contains external modules?', test_id: tests[3].id },
-  { body: 'Which ruby on Rails component creates the user interface?', test_id: tests[3].id },
-  { body: 'Which group headers, apply a Content-Length?', test_id: tests[2].id }
+  { body: 'What method removes the last element in an array and returns it?', test: tests[1] },
+  { body: 'Which statement is used to define methods that take an unlimited number of arguments?', test: tests[1] },
+  { body: 'which ruby on rails application directory contains external modules?', test: tests[3] },
+  { body: 'Which ruby on Rails component creates the user interface?', test: tests[3] },
+  { body: 'Which group headers, apply a Content-Length?', test: tests[2] },
+  { body: 'Which objects return method "where"?', test: tests[5] },
+  { body: 'What relationship requires the creation of a join table?', test: tests[6] }
   ])
 
 answers = Answer.create!([
-  { body: 'Pop', correct: true, question_id: questions[0].id },
-  { body: 'Splat', correct: true, question_id: questions[1].id },
-  { body: 'lib/', correct: true, question_id: questions[2].id },
-  { body: 'View', correct: true, question_id: questions[3].id },
-  { body: 'Entity headers', correct: true, question_id: questions[4].id }
+  { body: 'Pop', correct: true, question: questions[0] },
+  { body: 'Splat', correct: true, question: questions[1] },
+  { body: 'lib/', correct: true, question: questions[2] },
+  { body: 'View', correct: true, question: questions[3] },
+  { body: 'Entity headers', correct: true, question: questions[4].id },
+  { body: 'Instance of ActiveRecord::Relation', correct: true, question: questions[5] },
+  { body: 'Single instance of the model', correct: false, question: questions[5] },
+  { body: 'has_many :through', correct: true, question: questions[6] },
+  { body: 'has_and_belongs_to_many', correct: false, question: questions[6] }
   ])
 
-users = User.create!([
-  { name: 'Ivan'},
-  { name: 'Peter'},
-  { name: 'Sidor'}
-  ])
-
-tests_logs = TestsLog.create!([
-  { user_id: users[0].id, test_id: tests[0].id },
-  { user_id: users[0].id, test_id: tests[1].id },
-  { user_id: users[0].id, test_id: tests[2].id },
-  { user_id: users[1].id, test_id: tests[1].id },
-  { user_id: users[1].id, test_id: tests[2].id },
-  { user_id: users[2].id, test_id: tests[3].id },
-  { user_id: users[2].id, test_id: tests[4].id },
-  { user_id: users[2].id, test_id: tests[4].id }
+logbooks = Logbook.create!([
+  { user: users[0], test: tests[0] },
+  { user: users[0], test: tests[1] },
+  { user: users[0], test: tests[2] },
+  { user: users[1], test: tests[1] },
+  { user: users[1], test: tests[2] },
+  { user: users[2], test: tests[3] },
+  { user: users[2], test: tests[4] },
+  { user: users[2], test: tests[4] }
   ])
