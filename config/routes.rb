@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'questions#index' #set the Root route
+  #root to: 'questions#index' #set the Root route
   resources :tests do
     resources :questions, shallow: true
   end

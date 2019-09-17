@@ -1,7 +1,5 @@
 class QuestionsController < ApplicationController
-    def index
-      #render inline: 'List of test questions: <%= @test.questions.pluck(:body) %>'
-      #render plain: 'All texts'
-      render plain: { tests: Test.all }
-    end
+  def index
+    render inline: 'List of test questions: <%= Test.find(params[:test_id]).questions.pluck(:body) %>'
+  end
 end
