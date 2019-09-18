@@ -6,7 +6,18 @@ class QuestionsController < ApplicationController
     render inline: 'List of test questions: <%= @test.questions.pluck(:body) %>'
   end
 
-  def new
+  def show
+    render inline: '<%= @question.body %>'
+  end
+
+  def new; end
+
+  def create
+    @question = Question.create(question_params)
+  end
+
+  def destroy
+    @question.destroy
   end
 
   private
@@ -17,5 +28,9 @@ class QuestionsController < ApplicationController
 
   def find_question
     @question = Question.find(params[:id])
+  end
+
+  def question_params
+    params.require(:question).permit(:body)
   end
 end
