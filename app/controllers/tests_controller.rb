@@ -1,5 +1,4 @@
 class TestsController < ApplicationController
-  before_action :find_test, only: %i[show]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_test_not_found
 
@@ -12,15 +11,24 @@ class TestsController < ApplicationController
     @questions = Test.find(params[:id]).questions
   end
 
-  def new; end
+  def new
+    @test = Test.new
+  end
 
   def destroy
 
   end
 
   def create
-    test = @test.create(test_params)
-    redirect_to test
+    @test = Test.new(test_params)
+
+    if @test.save
+      redirect_to @test
+    else
+      render :new
+    end
+    #  test = @test.create(test_params)
+    #  redirect_to test
   end
 
   private
@@ -30,7 +38,7 @@ class TestsController < ApplicationController
   end
 
   def test_params
-    params.require(:test).permit(:title, :level, :category_id)
+    params.require(:test).permit(:title, :level, :category_id, :author_id)
   end
 
   def rescue_with_test_not_found
