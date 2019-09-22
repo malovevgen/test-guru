@@ -1,0 +1,5 @@
+<%= form_with model: [@test, @question], local: true do |form| %>
+<p>
+  <strong>Test question:</strong>
+  <%= @questions.pluck(:body) %>
+</p>

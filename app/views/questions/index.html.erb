@@ -1,0 +1,13 @@
+<h1>Questions</h1>
+
+<table>
+  <tr>
+    <th>Body</th>
+  </tr>
+
+  <%= @questions.each do |question| %>
+    <tr>
+      <td><%=question.body %></td>
+    </tr>
+  <% end %>
+</table>
