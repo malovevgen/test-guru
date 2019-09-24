@@ -1,4 +1,5 @@
 <%= form_with model: @test, local: true do |form| %>
+  <%=render 'shared/errors', resource: @test %>
 
   <p>
     <%= form.label :title %>
@@ -7,7 +8,7 @@
 
   <p>
     <%= form.label :level %>
-    <%= form.text_field :level, id: :test_level %>
+    <%= form.number_field :level, id: :test_level %>
   </p>
 
   <p>
@@ -17,7 +18,7 @@
 
   <p>
     <%= form.label :author_id %>
-    <%= form.text_field :author_id, id: :test_author_id %>
+    <%= form.number_field :author_id, id: :test_author_id %>
 
   </p>
 
