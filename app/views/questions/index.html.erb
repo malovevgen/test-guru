@@ -3,11 +3,8 @@
 <table>
   <tr>
     <th>Body</th>
+    <th colspan="2">Actions</th>
   </tr>
 
-  <%= @questions.each do |question| %>
-    <tr>
-      <td><%=question.body %></td>
-    </tr>
-  <% end %>
+  <%= render @questions %>
 </table>

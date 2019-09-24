@@ -8,11 +8,10 @@
   <%= @test.level %>
 </p>
 
-<p>
-  <strong>Test question:</strong>
-  <%=  @questions.pluck(:body)#render %>
-</p>
-
+<strong>Test question:</strong>
+<table>
+<%= render @test.questions %>
+</table>
 <%= link_to 'Edit', edit_test_path(@test) %>
 <%= link_to 'Back', tests_path %>
 
