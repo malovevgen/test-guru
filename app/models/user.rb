@@ -1,6 +1,6 @@
 class User < ApplicationRecord
-  has_many :logbooks, dependent: :destroy
-  has_many :tests, through: :logbooks
+  has_many :test_passages, dependent: :destroy
+  has_many :tests, through: :test_passages
   has_many :tests_created, class_name: 'Test', foreign_key: :author_id, dependent: :nullify
 
   validates :name, :email, presence: true

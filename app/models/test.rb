@@ -2,8 +2,8 @@ class Test < ApplicationRecord
   belongs_to :category
   belongs_to :author, class_name: 'User', foreign_key: :author_id
   has_many :questions, dependent: :nullify
-  has_many :logbooks, dependent: :destroy
-  has_many :users, through: :logbooks
+  has_many :test_passages, dependent: :destroy
+  has_many :users, through: :test_passages
 
   validates :title, presence: true
 
