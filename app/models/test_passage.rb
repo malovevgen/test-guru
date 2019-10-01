@@ -1,4 +1,7 @@
 class TestPassage < ApplicationRecord
+
+  SUCCESS_RATE = 85
+
   belongs_to :test
   belongs_to :user
   belongs_to :current_question, class_name: 'Question', optional: true
@@ -11,6 +14,14 @@ class TestPassage < ApplicationRecord
 
   def total_questions
     test.questions.count
+  end
+
+  def percent_correct
+    (correct_questions.to_f * 100 / total_questions).floor
+  end
+
+  def success?
+    percent_correct >= SUCCESS_RATE
   end
 
   def current_question_number
