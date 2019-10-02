@@ -6,7 +6,7 @@ class TestPassage < ApplicationRecord
   belongs_to :user
   belongs_to :current_question, class_name: 'Question', optional: true
 
-  before_validation :before_validation_set_question, on: :create
+  before_validation :before_validation_set_question, on: %i[create update]
 
   def completed?
     current_question.nil?
@@ -25,12 +25,11 @@ class TestPassage < ApplicationRecord
   end
 
   def current_question_number
-     test.questions.order(:id).where('id < ?', current_question.id).count + 1
+    test.questions.order(:id).where('id < ?', current_question.id).count + 1
   end
 
   def accept!(answer_ids)
     self.correct_questions += 1 if correct_answer?(answer_ids)
-    self.current_question = next_question
     save!
   end
 
