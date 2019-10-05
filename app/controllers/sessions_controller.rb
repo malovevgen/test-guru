@@ -16,4 +16,10 @@ class SessionsController < ApplicationController
     end
   end
 
+  def destroy
+    #reset_session
+    session.delete(:user_id)
+    redirect_to login_path, notice: 'Вы успешно вышли из аккаунта!'
+  end
+
 end
