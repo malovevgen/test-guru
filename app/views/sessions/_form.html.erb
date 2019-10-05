@@ -1,17 +1,6 @@
 <%= form_with url: sessions_path, local: true do |form| %>
-  <% if flash[:alert] %>
-    <%= content_tag :p, flash[:alert], class: 'flash alert' %>
-  <% end %>
 
-  <%#= flash_message(:alert) %>
-
-
-  <%#=render 'shared/errors', resource: @session %>
-
-  <p>
-    <%#= form.label :name %><br>
-    <%#= form.text_field :name, id: :user_name %>
-  </p>
+  <%= flash_message(:alert) %>
 
   <p>
     <%= form.label :email %><br>
@@ -21,11 +10,6 @@
   <p>
     <%= form.label :password %><br>
     <%= form.password_field :password, id: :user_password %>
-  </p>
-
-  <p>
-    <%#= form.label :password_confirmation %><br>
-    <%#= form.password_field :password_confirmation, id: :user_password_confirmation %>
   </p>
 
   <p><%= form.submit 'Enter' %></p>
