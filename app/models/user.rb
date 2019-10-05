@@ -12,6 +12,8 @@ class User < ApplicationRecord
   validates :name, :email, presence: true
   validates :password, presence: true, if: Proc.new { |u| u.password_digest.blank? }
   validates :password, confirmation: true
+  validates :email, uniqueness: true,
+                    format: { with: URI::MailTo::EMAIL_REGEXP}
 
   has_secure_password
 
