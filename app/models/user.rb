@@ -1,10 +1,14 @@
 #require 'digest/shal'
 
 class User < ApplicationRecord
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+
+  devise :database_authenticatable,
+         :registerable,
+         :recoverable,
+         :rememberable,
+         :validatable,
+         :trackable,
+         :confirmable
 
   attr_reader :password
   attr_writer :password_confirmation
@@ -18,8 +22,6 @@ class User < ApplicationRecord
   validates :password, confirmation: true
   validates :email, uniqueness: true,
                     format: { with: URI::MailTo::EMAIL_REGEXP}
-
-  has_secure_password
 
   def test_passage(test)
     test_passages.order(updated_at: :desc).find_by(test_id: test.id) # order(:id)
