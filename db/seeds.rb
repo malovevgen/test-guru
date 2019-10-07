@@ -13,9 +13,9 @@ categories = Category.create!([
   ])
 
 users = User.create!([
-  { name: 'Ivan', email: 'ivan@rambler.hn' },
-  { name: 'Peter', email: 'peter@rambler.hn' },
-  { name: 'Sidor', email: 'sidor@rambler.hn' }
+  { email: 'ivan@rambler.hn', password: '123456' },
+  { email: 'peter@rambler.hn', password: '123456' },
+  { email: 'sidor@rambler.hn', password: '123456' }
   ])
 
 tests = Test.create!([
@@ -44,14 +44,14 @@ answers = Answer.create!([
   { body: 'Splat', correct: true, question: questions[1] },
   { body: 'lib/', correct: true, question: questions[2] },
   { body: 'View', correct: true, question: questions[3] },
-  { body: 'Entity headers', correct: true, question: questions[4].id },
+  { body: 'Entity headers', correct: true, question: questions[4] },
   { body: 'Instance of ActiveRecord::Relation', correct: true, question: questions[5] },
   { body: 'Single instance of the model', correct: false, question: questions[5] },
   { body: 'has_many :through', correct: true, question: questions[6] },
   { body: 'has_and_belongs_to_many', correct: false, question: questions[6] }
   ])
 
-logbooks = Logbook.create!([
+testpassages = TestPassage.create!([
   { user: users[0], test: tests[0] },
   { user: users[0], test: tests[1] },
   { user: users[0], test: tests[2] },
