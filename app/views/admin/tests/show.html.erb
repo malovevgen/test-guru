@@ -10,7 +10,7 @@
 
 <strong>Test question:</strong>
 <table>
-<%= render partial: 'questions/question', collection: @test.questions %>
+<%= render partial: 'admin/questions/question', collection: @test.questions %>
 </table>
 <%= link_to 'Edit', edit_admin_test_path(@test) %>
 <%= link_to 'Back', admin_tests_path %>
