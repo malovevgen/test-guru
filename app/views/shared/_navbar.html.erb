@@ -1,7 +1,7 @@
 <p class="nav user"><%= link_to 'Test-guru', tests_path %></p>
 <% if user_signed_in? %>
    <p class="nav user">
-    Welcome, <b><%= current_user.email %></b> Guru</p>
+    Welcome, <b><%= current_user.first_name %></b> Guru</p>
     <%= link_to 'Exit', destroy_user_session_path, method: :delete %>
   </p>
 <% else %>
