@@ -2,6 +2,13 @@
 
 class User < ApplicationRecord
 
+  attr_reader :password
+  attr_writer :password_confirmation
+
+  has_many :test_passages, dependent: :destroy
+  has_many :tests, through: :test_passages
+  has_many :tests_created, class_name: 'Test', foreign_key: :author_id, dependent: :nullify
+
   devise :database_authenticatable,
          :registerable,
          :recoverable,
@@ -9,13 +16,6 @@ class User < ApplicationRecord
          :validatable,
          :trackable,
          :confirmable
-
-  attr_reader :password
-  attr_writer :password_confirmation
-
-  has_many :test_passages, dependent: :destroy
-  has_many :tests, through: :test_passages
-  has_many :tests_created, class_name: 'Test', foreign_key: :author_id, dependent: :nullify
 
   def test_passage(test)
     test_passages.order(updated_at: :desc).find_by(test_id: test.id) # order(:id)
