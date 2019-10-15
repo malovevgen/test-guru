@@ -17,18 +17,48 @@ ru:
         header: "Вопрос"
         answer: "Ответ:"
         correct: "Правильность:"
+    questions:
+      show:
+        header: "Вопрос"
+        answers: "Ответы"
+        edit_question: "Редактирование вопроса"
+      new:
+        create: "Создать в тесте "
+        header: "новый вопрос"
+    tests:
+      index:
+        new_test: "Создать тест"
+        actions: "Действия"
+      create:
+        success: "Тест успешно создан."
+      edit:
+        edit_title: "Редактирование теста"
+      new:
+        new_test: "Создать новый тест"
+      test:
+        del_confirm: "Удалить тест %{title}?"
+      show:
+        test: "Тест"
+        level: "Уровень"
+        new_question: "Создать вопрос"
+        questions: "Перечень вопросов"
+        edit_test: "Редактировать тест"
 
   helpers:
     submit:
       test:
         create: "Создать тест"
         update: "Обновить тест"
-
+      question:
+        create: "Создать вопрос"
     label:
       test:
         title: "Название"
         level: "Уровень"
         category_id: "Категория"
+      question:
+        body: "Текст вопроса:"
+
 
   tests:
     test:

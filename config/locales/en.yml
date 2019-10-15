@@ -53,10 +53,13 @@ en:
         header: " Question"
         answers: "Answers"
         edit_question: "Edit question"
-
+      new:
+        create: "Create into test  "
+        header: "new question"
     tests:
       index:
         new_test: "Create test"
+        actions: "Actions"
       create:
         success: "Test was successfully created."
       edit:
@@ -79,11 +82,15 @@ en:
       test:
         create: "Create test"
         update: "Update test"
+      question:
+        create: "Create question"
     label:
       test:
         title: "Title"
         level: "Level"
         category_id: "Category"
+      question:
+        body: "Text:"
 
   tests:
     test:
