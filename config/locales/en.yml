@@ -32,6 +32,66 @@
 en:
   hello: "Hello world"
 
+  admin:
+    answers:
+      answer:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        del_confirm: "Are you sure?"
+      edit:
+        header: "Editing answer"
+        back: "Back"
+      new:
+        header: "New answer"
+      show:
+        header: "Question"
+        answer: "Answer:"
+        correct: "Correct:"
+    questions:
+      show:
+        header: " Question"
+        answers: "Answers"
+        edit_question: "Edit question"
+
+    tests:
+      index:
+        new_test: "Create test"
+      create:
+        success: "Test was successfully created."
+      edit:
+        edit_title: "Edit test"
+      new:
+        new_test: "Create new test"
+      test:
+        del_confirm: "Delete test %{title}?"
+      show:
+        test: "Test"
+        level: "Level"
+        new_question: "Create question"
+        questions: "Questions list"
+        edit_test: "Edit test"
+
+
+
+  helpers:
+    submit:
+      test:
+        create: "Create test"
+        update: "Update test"
+    label:
+      test:
+        title: "Title"
+        level: "Level"
+        category_id: "Category"
+
   tests:
+    test:
+      start: "To start the test"
     index:
       header: "Tricky Tests"
+      title: "The name of the test"
+      level: "Level"
+      category: "Category"
+      author: "The author ID"
+      number: "Number of questions"
