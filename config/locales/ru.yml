@@ -1,6 +1,109 @@
+#ru:
+  #hello: "Привет мир"
+
+  #tests:
+    #index:
+      #header: "Доступные тесты"
+
 ru:
-  hello: "Привет мир"
+  admin:
+    answers:
+      answer:
+        show: "Просмотреть"
+        edit: "Изменить"
+        delete: "Удалить"
+        del_confirm: "Вы уверены?"
+      edit:
+        header: "Редактировать ответ"
+        back: "Назад"
+      new:
+        header: "Новый ответ"
+      show:
+        header: "Вопрос"
+        answer: "Ответ:"
+        correct: "Корректность:"
+    questions:
+      show:
+        header: " Вопрос"
+        answers: "Ответы"
+        edit_question: "Редактировать вопрос"
+    tests:
+      index:
+        new_test: "Создать тест"
+      create:
+        success: "Тест успешно создан."
+      edit:
+        edit_title: "Редактировать тест"
+      new:
+        new_test: "Создать новый тест"
+      test:
+        del_confirm: "Удалить тест %{title}?"
+      show:
+        test: "Тест"
+        level: "Уровень"
+        new_question: "Создать вопрос"
+        questions: "Вопросы теста"
+        edit_test: "Редактировать тест"
+    nav:
+      header: "Админка ТестГуру"
+
+  helpers:
+    submit:
+      test:
+        create: "Создать тест"
+        update: "Обновить тест"
+      question:
+        create: "Создать вопрос"
+        update: "Сохранить вопрос"
+      answer:
+        create: "Создать ответ"
+        update: "Сохранить ответ"
+    select:
+      prompt: "Выбрать категорию"
+    label:
+      test:
+        title: "Заголовок"
+        level: "Уровень"
+        category_id: "Категория"
 
   tests:
+    test:
+      begin: "Начать тест"
     index:
       header: "Доступные тесты"
+      name: "Название теста"
+      category: "Категория"
+      level: "Уровень"
+      quest_count: "Количество вопросов"
+      actions: "Действия"
+
+  shared:
+    navbar:
+      header: "Тест Гуру"
+      welcome: "Добро пожаловать, "
+      logout: "Выход"
+      sign_up: "Регистрация"
+      sign_in: "Войти"
+    errors:
+      header:
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        one: "Обнаружена %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"
+
+  test_passages:
+    result:
+      header: "Тест %{title} успешно завершен"
+      result: "Ваш результат: "
+      success: "Тест пройден."
+      fail: "Попробуйте еще раз."
+      link_back: "Вернуться к выбору теста"
+    show:
+      current_test: "Прохождение %{title} теста"
+      question_num: "Вопрос № "
+      from: " из"
+      next: "Далее"
+
+  layouts:
+    admin:
+      panel: "Панель администратора"
