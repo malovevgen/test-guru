@@ -69,6 +69,7 @@ en:
         edit_title: "Edit test"
       new:
         new_test: "Create new test"
+        back: "To the list of tests"
       test:
         del_confirm: "Delete test %{title}?"
       show:
@@ -121,6 +122,11 @@ en:
         update: "Update test"
       question:
         create: "Create question"
+      answer:
+        create: "Create answer"
+        update: "Update answer"
+    select:
+      prompt: "Select a category"
     label:
       test:
         title: "Title"

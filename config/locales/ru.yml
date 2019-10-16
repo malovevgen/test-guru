@@ -38,6 +38,7 @@ ru:
         edit_title: "Редактирование теста"
       new:
         new_test: "Создать новый тест"
+        back: "К списку тестов"
       test:
         del_confirm: "Удалить тест %{title}?"
       show:
@@ -90,6 +91,11 @@ ru:
         update: "Обновить тест"
       question:
         create: "Создать вопрос"
+      answer:
+        create: "Создать ответ"
+        update: "Обновить ответ"
+    select:
+      prompt: "Выберите категорию"
     label:
       test:
         title: "Название"
