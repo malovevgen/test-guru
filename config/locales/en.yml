@@ -90,6 +90,29 @@ en:
       category: "Category"
       author: "The author ID"
       number: "Number of questions"
+  shared:
+    navbar:
+      header: "Test Guru"
+      welcome: "Welcome, "
+      logout: "Logout"
+      sign_up: "Sign up"
+      sign_in: "Sign in"
+    errors:
+      header:
+        one: "%{count} error detected"
+        other: "%{count} errors detected"      
+  test_passages:
+    result:
+      header: "Test %{title} was successfully completed!"
+      result: "Your result: "
+      success: "Test passed."
+      fail: "Try again."
+      link_back: "Return to test choice"
+    show:
+      current_test: "You're taking the test %{title}"
+      question_num: "Question № "
+      from: " from"
+      next: "Next question"
 
   helpers:
     submit:
