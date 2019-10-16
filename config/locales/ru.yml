@@ -25,6 +25,9 @@ ru:
       new:
         create: "Создать в тесте "
         header: "новый вопрос"
+      edit:
+        header: "Редактировать в тесте"
+        question: "вопрос"
     tests:
       index:
         new_test: "Создать тест"
@@ -43,6 +46,19 @@ ru:
         new_question: "Создать вопрос"
         questions: "Перечень вопросов"
         edit_test: "Редактировать тест"
+    nav:
+      header: "Панель админов Тест Гуру"
+  tests:
+    test:
+      start: "Начать тест"
+    index:
+      header: "Доступные тесты"
+      title: "Название теста"
+      level: "Уровень"
+      category: "Категория"
+      author: "Идентификатор автора "
+      number: "Количество вопросов"
+
 
   helpers:
     submit:
@@ -58,17 +74,5 @@ ru:
         category_id: "Категория"
       question:
         body: "Текст вопроса:"
-
-
-  tests:
-    test:
-      start: "Начать тест"
-    index:
-      header: "Доступные тесты"
-      title: "Название теста"
-      level: "Уровень"
-      category: "Категория"
-      author: "Идентификатор автора "
-      number: "Количество вопросов"
 
 
