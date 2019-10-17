@@ -6,11 +6,11 @@
 
 <h2><%= t('.answers') %></h2>
 
-<%= link_to t('admin.answers.new.header'), new_admin_question_answer_path(@question) %>
+<%= link_to t('admin.shared.new_question'), new_admin_question_answer_path(@question) %>
 
 <ol>
   <%= render @question.answers %>
 </ol>
 
 <%= link_to t('.edit_question'), edit_admin_question_path(@question) %> |
-<%= link_to t('admin.answers.edit.back'), admin_test_path(@question.test) %>
+<%= link_to t('admin.shared.back'), admin_test_path(@question.test) %>

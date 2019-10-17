@@ -3,14 +3,8 @@ ru:
 
   admin:
     answers:
-      answer:
-        show: "Показать"
-        edit: "Редактировать"
-        delete: "Удалить"
-        del_confirm: "Вы уверены?"
       edit:
         header: "Редактируемый вопрос"
-        back: "Назад"
       new:
         header: "Новый вопрос"
       show:
@@ -30,6 +24,7 @@ ru:
         question: "вопрос"
     tests:
       index:
+        header: "Тесты"
         new_test: "Создать тест"
         actions: "Действия"
       create:
@@ -49,6 +44,13 @@ ru:
         edit_test: "Редактировать тест"
     nav:
       header: "Панель админов Тест Гуру"
+    shared:
+      show: "Показать"
+      edit: "Редактировать"
+      delete: "Удалить"
+      del_confirm: "Вы уверены?"
+      back: "Назад"
+      new_question: "Новый вопрос"
   tests:
     test:
       start: "Начать тест"

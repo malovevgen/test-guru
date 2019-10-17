@@ -34,14 +34,8 @@ en:
 
   admin:
     answers:
-      answer:
-        show: "Show"
-        edit: "Edit"
-        delete: "Delete"
-        del_confirm: "Are you sure?"
       edit:
         header: "Editing answer"
-        back: "Back"
       new:
         header: "New answer"
       show:
@@ -61,6 +55,7 @@ en:
         question: "question"        
     tests:
       index:
+        header: "Tests"
         new_test: "Create test"
         actions: "Actions"
       create:
@@ -80,7 +75,13 @@ en:
         edit_test: "Edit test"
     nav:
       header: "Test Guru Admin Panel"
-
+    shared:
+      show: "Show"
+      edit: "Edit"
+      delete: "Delete"
+      del_confirm: "Are you sure?"
+      back: "Back"
+      new_question: "New question"
   tests:
     test:
       start: "To start the test"

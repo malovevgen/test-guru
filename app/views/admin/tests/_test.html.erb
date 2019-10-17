@@ -4,10 +4,10 @@
   <td><%= test.category_id %></td>
   <td><%= test.author_id %></td>
   <td><%= test.questions.size %></td>
-  <td><%= link_to t('admin.answers.answer.show'), admin_test_path(test) %></td>
-  <td><%= link_to t('admin.answers.answer.edit'), edit_admin_test_path(test) %></td>
+  <td><%= link_to t('admin.shared.show'), admin_test_path(test) %></td>
+  <td><%= link_to t('admin.shared.edit'), edit_admin_test_path(test) %></td>
   <td>
-    <%= link_to t('admin.answers.answer.delete'),
+    <%= link_to t('admin.shared.delete'),
                 admin_test_path(test),
                 method: :delete,
                 data: { confirm: t('.del_confirm') } %>

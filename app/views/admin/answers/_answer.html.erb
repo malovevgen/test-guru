@@ -1,9 +1,9 @@
 <li>
   <%= answer.body %><br>
-  <%= link_to t('.show'), admin_answer_path(answer) %> |
-  <%= link_to t('.edit'), edit_admin_answer_path(answer) %> |
-  <%= link_to t('.delete'),
+  <%= link_to t('admin.shared.show'), admin_answer_path(answer) %> |
+  <%= link_to t('admin.shared.edit'), edit_admin_answer_path(answer) %> |
+  <%= link_to t('admin.shared.delete'),
                admin_answer_path(answer),
                method: :delete,
-               data: { confirm: t('.del_confirm') } %>
+               data: { confirm: t('admin.shared.del_confirm') } %>
 </li>
