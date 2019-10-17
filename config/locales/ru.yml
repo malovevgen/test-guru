@@ -1,6 +1,109 @@
 ru:
   hello: "Привет мир"
 
+  admin:
+    answers:
+      edit:
+        header: "Редактируемый вопрос"
+      new:
+        header: "Новый вопрос"
+      show:
+        header: "Вопрос"
+        answer: "Ответ:"
+        correct: "Правильность:"
+    questions:
+      show:
+        header: "Вопрос"
+        answers: "Ответы"
+        edit_question: "Редактирование вопроса"
+      new:
+        create: "Создать в тесте "
+        header: "новый вопрос"
+      edit:
+        header: "Редактировать в тесте"
+        question: "вопрос"
+    tests:
+      index:
+        header: "Тесты"
+        new_test: "Создать тест"
+        actions: "Действия"
+      create:
+        success: "Тест успешно создан."
+      edit:
+        edit_title: "Редактирование теста"
+      new:
+        new_test: "Создать новый тест"
+        back: "К списку тестов"
+      test:
+        del_confirm: "Удалить тест %{title}?"
+      show:
+        test: "Тест"
+        level: "Уровень"
+        new_question: "Создать вопрос"
+        questions: "Перечень вопросов"
+        edit_test: "Редактировать тест"
+    nav:
+      header: "Панель админов Тест Гуру"
+    shared:
+      show: "Показать"
+      edit: "Редактировать"
+      delete: "Удалить"
+      del_confirm: "Вы уверены?"
+      back: "Назад"
+      new_question: "Новый вопрос"
   tests:
+    test:
+      start: "Начать тест"
     index:
       header: "Доступные тесты"
+      title: "Название теста"
+      level: "Уровень"
+      category: "Категория"
+      author: "Идентификатор автора "
+      number: "Количество вопросов"
+  shared:
+    navbar:
+      header: "Тест Гуру"
+      welcome: "Добро пожаловать, "
+      logout: "Выход"
+      sign_up: "Регистрация"
+      sign_in: "Войти"
+    errors:
+      header:
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        one: "Обнаружена %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"    
+  test_passages:
+    result:
+      header: "Тест %{title} успешно завершен"
+      result: "Ваш результат: "
+      success: "Тест пройден."
+      fail: "Попробуйте еще раз."
+      link_back: "Вернуться к выбору теста"
+    show:
+      current_test: "Прохождение %{title} теста"
+      question_num: "Вопрос № "
+      from: " из"
+      next: "Следующий вопрос"
+  helpers:
+    submit:
+      test:
+        create: "Создать тест"
+        update: "Обновить тест"
+      question:
+        create: "Создать вопрос"
+      answer:
+        create: "Создать ответ"
+        update: "Обновить ответ"
+    select:
+      prompt: "Выберите категорию"
+    label:
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория"
+      question:
+        body: "Текст вопроса:"
+
+

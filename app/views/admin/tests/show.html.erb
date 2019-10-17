@@ -1,17 +1,17 @@
 <p>
-  <strong>Test</strong>
+  <strong><%= t('.test') %></strong>
   <%= @test.title %>
 </p>
 
 <p>
-  <strong>Level:</strong>
+  <strong><%= t('.level') %></strong>
   <%= @test.level %>
 </p>
 
-<strong>Test question:</strong>
+<strong><%= t('.questions') %>:</strong>
 <table>
 <%= render partial: 'admin/questions/question', collection: @test.questions %>
 </table>
-<%= link_to 'Edit', edit_admin_test_path(@test) %>
-<%= link_to 'Create new question', new_admin_test_question_path(@test) %>
-<%= link_to 'Back', admin_tests_path %>
+<%= link_to t('.edit_test'), edit_admin_test_path(@test) %>
+<%= link_to t('admin.shared.new_question'), new_admin_test_question_path(@test) %>
+<%= link_to t('admin.shared.back'), admin_tests_path %>

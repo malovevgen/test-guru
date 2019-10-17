@@ -32,6 +32,107 @@
 en:
   hello: "Hello world"
 
+  admin:
+    answers:
+      edit:
+        header: "Editing answer"
+      new:
+        header: "New answer"
+      show:
+        header: "Question"
+        answer: "Answer:"
+        correct: "Correct:"
+    questions:
+      show:
+        header: " Question"
+        answers: "Answers"
+        edit_question: "Edit question"
+      new:
+        create: "Create into test  "
+        header: "new question"
+      edit:
+        header: "Edit in the test"
+        question: "question"        
+    tests:
+      index:
+        header: "Tests"
+        new_test: "Create test"
+        actions: "Actions"
+      create:
+        success: "Test was successfully created."
+      edit:
+        edit_title: "Edit test"
+      new:
+        new_test: "Create new test"
+        back: "To the list of tests"
+      test:
+        del_confirm: "Delete test %{title}?"
+      show:
+        test: "Test"
+        level: "Level"
+        new_question: "Create question"
+        questions: "Questions list"
+        edit_test: "Edit test"
+    nav:
+      header: "Test Guru Admin Panel"
+    shared:
+      show: "Show"
+      edit: "Edit"
+      delete: "Delete"
+      del_confirm: "Are you sure?"
+      back: "Back"
+      new_question: "New question"
   tests:
+    test:
+      start: "To start the test"
     index:
       header: "Tricky Tests"
+      title: "The name of the test"
+      level: "Level"
+      category: "Category"
+      author: "The author ID"
+      number: "Number of questions"
+  shared:
+    navbar:
+      header: "Test Guru"
+      welcome: "Welcome, "
+      logout: "Logout"
+      sign_up: "Sign up"
+      sign_in: "Sign in"
+    errors:
+      header:
+        one: "%{count} error detected"
+        other: "%{count} errors detected"      
+  test_passages:
+    result:
+      header: "Test %{title} was successfully completed!"
+      result: "Your result: "
+      success: "Test passed."
+      fail: "Try again."
+      link_back: "Return to test choice"
+    show:
+      current_test: "You're taking the test %{title}"
+      question_num: "Question № "
+      from: " from"
+      next: "Next question"
+
+  helpers:
+    submit:
+      test:
+        create: "Create test"
+        update: "Update test"
+      question:
+        create: "Create question"
+      answer:
+        create: "Create answer"
+        update: "Update answer"
+    select:
+      prompt: "Select a category"
+    label:
+      test:
+        title: "Title"
+        level: "Level"
+        category_id: "Category"
+      question:
+        body: "Text:"
+

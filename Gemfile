@@ -29,15 +29,10 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'devise', '~> 4.0'
 
-# gem 'bcrypt', '~> 3.1.7'
+# LOCALIZATION
 
-# Use ActiveStorage variant
-# gem 'mini_magick', '~> 4.8'
+gem 'rails-i18n', '~> 4.0'
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
-# Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
