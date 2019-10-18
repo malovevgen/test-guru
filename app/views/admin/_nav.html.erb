@@ -2,7 +2,7 @@
   <span class="nav-admin title"><%= t('.header') %></span>
 
   <div class="nav-admin user">
-    <%= t('shared.navbar.welcome') %> <b class="nav-admin user-first_name"><%=  current_user.first_name %></b> 
-    <%=  link_to t('shared.navbar.logout'), destroy_user_session_path, method: :delete %>
+    <%= t('shared.nav.welcome') %> <b class="nav-admin user-first_name"><%=  current_user.first_name %></b> 
+    <%=  link_to t('shared.nav.logout'), destroy_user_session_path, method: :delete %>
   </div>
 </div>
