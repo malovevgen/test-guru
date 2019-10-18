@@ -62,7 +62,7 @@ ru:
       author: "Идентификатор автора "
       number: "Количество вопросов"
   shared:
-    navbar:
+    nav:
       header: "Тест Гуру"
       welcome: "Добро пожаловать, "
       logout: "Выход"
