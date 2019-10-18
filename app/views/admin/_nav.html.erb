@@ -1,8 +1,8 @@
-<div class="nav nav-admin">
-  <span class="nav-admin title"><%= t('.header') %></span>
+<nav class="navbar navbar-light bg-light nav-admin">
+  <div class="nav-admin title"><%= link_to t('shared.nav.header'), root_path %>&nbsp;</div>
 
   <div class="nav-admin user">
-    <%= t('shared.nav.welcome') %> <b class="nav-admin user-first_name"><%=  current_user.first_name %></b> 
-    <%=  link_to t('shared.nav.logout'), destroy_user_session_path, method: :delete %>
+    <%= t('shared.nav.welcome') %><b class="nav-admin user-email"><%=  current_user.first_name.capitalize %></b> |
+    <%=  link_to t("shared.nav.logout"), destroy_user_session_path, method: :delete %>
   </div>
-</div>
+</nav>
