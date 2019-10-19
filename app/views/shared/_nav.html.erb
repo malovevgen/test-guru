@@ -1,5 +1,5 @@
 <nav class="navbar navbar-light bg-light">
-  <div class="d-flex justify-content-start align-items-links">
+  <div class="d-flex justify-content-start align-items-center">
     <div> <%= link_to t('.header'), root_path, class: 'navbar-brand' %></div>
     <% if user_signed_in? %>
       <div class="navbar-brand"> <%= link_to t('admin.nav.header'),

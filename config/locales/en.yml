@@ -27,6 +27,7 @@ en:
         header: "Tests"
         new_test: "Create test"
         actions: "Actions"
+        ban: "You are not authorized to view this page"
       create:
         success: "Test was successfully created."
       edit:
