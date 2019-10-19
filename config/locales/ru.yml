@@ -59,11 +59,7 @@ ru:
       start: "Начать тест"
     index:
       header: "Доступные тесты"
-      title: "Название теста"
-      level: "Уровень"
-      category: "Категория"
-      author: "Идентификатор автора "
-      number: "Количество вопросов"
+
   shared:
     nav:
       header: "Тест Гуру"
@@ -76,7 +72,13 @@ ru:
         few: "Обнаружено %{count} ошибки"
         many: "Обнаружено %{count} ошибок"
         one: "Обнаружена %{count} ошибка"
-        other: "Обнаружено %{count} ошибки"    
+        other: "Обнаружено %{count} ошибки"
+    index:
+      title: "Название теста"
+      level: "Уровень"
+      category: "Категория"
+      author: "Идентификатор автора "
+      number: "Количество вопросов"
   test_passages:
     result:
       header: "Тест %{title} успешно завершен"

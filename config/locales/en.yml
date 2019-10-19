@@ -57,11 +57,6 @@ en:
       start: "To start the test"
     index:
       header: "Tricky Tests"
-      title: "The name of the test"
-      level: "Level"
-      category: "Category"
-      author: "The author ID"
-      number: "Number of questions"
   shared:
     nav:
       header: "Test Guru"
@@ -72,7 +67,13 @@ en:
     errors:
       header:
         one: "%{count} error detected"
-        other: "%{count} errors detected"      
+        other: "%{count} errors detected"
+    index:
+      title: "The name of the test"
+      level: "Level"
+      category: "Category"
+      author: "The author ID"
+      number: "Number of questions"
   test_passages:
     result:
       header: "Test %{title} was successfully completed!"

@@ -1,13 +1,19 @@
-<h1><%= t('.header') %></h1>
-
-<table>
-  <tr>
-    <th><%= t('.title') %></th>
-    <th><%= t('.level') %></th>
-    <th><%= t('.category') %></th>
-    <th><%= t('.author') %></th>
-    <th><%= t('.number') %></th>
-  </tr>
-
-  <%= render @tests %>
-</table>
+<div class="row justify-content-center mt-3">
+  <div class="col col-md-4"><h1><%= t('.header') %></h1></div>
+  <div class="col-12">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th><%= t('shared.index.title') %></th>
+        <th><%= t('shared.index.level') %></th>
+        <th><%= t('shared.index.category') %></th>
+        <th><%= t('shared.index.author') %></th>
+        <th><%= t('shared.index.number') %></th>
+      </tr>
+      </thead>
+      <tbody>
+      <%= render @tests %>
+      </tbody>
+    </table>
+  </div>
+</div>
