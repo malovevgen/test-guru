@@ -1,3 +1,7 @@
-<% flash.each do |key, message| %>
-  <%= content_tag :p, message, class: "flash #{key}" %>
-<% end %>
+<div class="row justify-content-center">
+  <% flash.each do |key, message| %>
+    <div class="col-6 alert <%= flash_message(key) %>">
+      <%= message %>
+    </div>
+  <% end %>
+</div>

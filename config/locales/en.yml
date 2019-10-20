@@ -1,34 +1,3 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
   hello: "Hello world"
 
@@ -58,6 +27,7 @@ en:
         header: "Tests"
         new_test: "Create test"
         actions: "Actions"
+        ban: "You are not authorized to view this page"
       create:
         success: "Test was successfully created."
       edit:
@@ -87,13 +57,8 @@ en:
       start: "To start the test"
     index:
       header: "Tricky Tests"
-      title: "The name of the test"
-      level: "Level"
-      category: "Category"
-      author: "The author ID"
-      number: "Number of questions"
   shared:
-    navbar:
+    nav:
       header: "Test Guru"
       welcome: "Welcome, "
       logout: "Logout"
@@ -102,7 +67,13 @@ en:
     errors:
       header:
         one: "%{count} error detected"
-        other: "%{count} errors detected"      
+        other: "%{count} errors detected"
+    index:
+      title: "The name of the test"
+      level: "Level"
+      category: "Category"
+      author: "The author ID"
+      number: "Number of questions"
   test_passages:
     result:
       header: "Test %{title} was successfully completed!"
