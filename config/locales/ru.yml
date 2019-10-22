@@ -91,6 +91,9 @@ ru:
       question_num: "Вопрос № "
       from: " из"
       next: "Следующий вопрос"
+    gist:
+      success: "Гист успешно создан"
+      failure: "Во время сохранения гиста произошла ошибка"
   helpers:
     submit:
       test:

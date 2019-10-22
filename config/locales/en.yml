@@ -86,6 +86,9 @@ en:
       question_num: "Question № "
       from: " from"
       next: "Next question"
+    gist:
+      success: "Gist was successfully created"
+      failure: "An error occured while saving gist"
 
   helpers:
     submit:
