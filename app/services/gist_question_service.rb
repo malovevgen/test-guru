@@ -30,7 +30,7 @@ class GistQuestionService
   end
 
   def octokit
-    Octokit::Client.new(access_token: ENV['ACCESS_TOKEN']')
+    Octokit::Client.new(access_token: ENV['ACCESS_TOKEN'])
   end
 
 end
