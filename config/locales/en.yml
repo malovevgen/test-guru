@@ -89,6 +89,8 @@ en:
     gist:
       success: "Gist was successfully created"
       failure: "An error occured while saving gist"
+      description: "A question about \"%{test}\" from Thinknetica TestGuru"
+      answers: "Answers:"
 
   helpers:
     submit:

@@ -94,6 +94,8 @@ ru:
     gist:
       success: "Гист успешно создан"
       failure: "Во время сохранения гиста произошла ошибка"
+      description: "Вопрос теста \"%{test}\" с сайта Thinknetica TestGuru"
+      answers: "Ответы:"
   helpers:
     submit:
       test:
