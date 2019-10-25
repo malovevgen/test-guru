@@ -96,6 +96,7 @@ ru:
       failure: "Во время сохранения гиста произошла ошибка"
       description: "Вопрос теста \"%{test}\" с сайта Thinknetica TestGuru"
       answers: "Ответы:"
+      view_gist: "Посмотреть Gist на GitHub"
   helpers:
     submit:
       test:
