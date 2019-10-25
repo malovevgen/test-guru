@@ -52,6 +52,13 @@ en:
       del_confirm: "Are you sure?"
       back: "Back"
       new_question: "New question"
+    gists:
+      index:
+        header: "GitHub Gists"
+        table:
+          user: "User"
+          question: "Question"
+          url: "URL"
   tests:
     test:
       start: "To start the test"

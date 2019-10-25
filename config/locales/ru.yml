@@ -54,6 +54,13 @@ ru:
       del_confirm: "Вы уверены?"
       back: "Назад"
       new_question: "Новый вопрос"
+    gists:
+      index:
+        header: "GitHub Gists"
+        table:
+          user: "Пользователь"
+          question: "Вопрос"
+          url: "URL"
   tests:
     test:
       start: "Начать тест"
