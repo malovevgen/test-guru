@@ -56,11 +56,10 @@ ru:
       new_question: "Новый вопрос"
     gists:
       index:
-        header: "GitHub Gists"
-        table:
-          user: "Пользователь"
-          question: "Вопрос"
-          url: "URL"
+        header: "Гисты на ГитХабе"
+        user: "Почта пользователя"
+        question: "Вопрос"
+        link: "Ссылка на гист"
   tests:
     test:
       start: "Начать тест"

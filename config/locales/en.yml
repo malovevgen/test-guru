@@ -55,10 +55,9 @@ en:
     gists:
       index:
         header: "GitHub Gists"
-        table:
-          user: "User"
-          question: "Question"
-          url: "URL"
+        user: "Email of user" 
+        question: "Question"
+        link: "GitHub link"
   tests:
     test:
       start: "To start the test"
