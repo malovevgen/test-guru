@@ -19,9 +19,12 @@ class TestPassagesController < ApplicationController
   end
 
   def gist
-    result = GistQuestionService.new(@test_passage.current_question).call
+    #result = GistQuestionService.new(@test_passage.current_question).call
+    service = GistQuestionService.new(@test_passage.current_question)
+    result = service.call
 
-      if result.html_url.present?
+
+      if service.success?
                       Gist.create!(question: @test_passage.current_question, user: @test_passage.user, gist_url: result.html_url)
       flash[:notice] = "#{t('.success') } #{view_context.link_to(t('.view_gist'),
                                                                          result.html_url,

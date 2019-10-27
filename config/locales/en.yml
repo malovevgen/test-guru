@@ -28,6 +28,7 @@ en:
         new_test: "Create test"
         actions: "Actions"
         ban: "You are not authorized to view this page"
+        gists: "To the list of gists on Github"
       create:
         success: "Test was successfully created."
       edit:
