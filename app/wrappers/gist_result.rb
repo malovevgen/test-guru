@@ -3,11 +3,11 @@ class GistResult
     @response = response
   end
 
-  def url
+  def html_url
     @response['html_url']
   end
 
   def success?
-    url.present?
+    html_url.present?
   end
 end

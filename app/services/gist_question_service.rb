@@ -7,7 +7,9 @@ class GistQuestionService
   end
 
   def call
-    @client.create_gist(gist_params)
+    response = @client.create_gist(gist_params)
+
+    GistResult.new(response)
   end
 
   def success?
