@@ -4,10 +4,13 @@
     <%= link_to t('.new_test'), new_admin_test_path %>
     <p> <%= link_to t('.gists'), admin_gists_path %></p>
 
-    <table class="table table-striped">
+    <table class="table">
       <thead>
       <tr>
-        <th><%= t('shared.index.title') %></th>
+        <th class="sort-by-title pointer">
+          <%= t('shared.index.title') %>
+          <%= octicon 'arrow-up', class: 'text-success hide' %>
+          <%= octicon 'arrow-down', class: 'text-success hide' %>
         <th><%= t('shared.index.level') %></th>
         <th><%= t('shared.index.category') %></th>
         <th><%= t('shared.index.author') %></th>
