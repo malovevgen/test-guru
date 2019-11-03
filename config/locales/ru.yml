@@ -28,6 +28,7 @@ ru:
         new_test: "Создать тест"
         actions: "Действия"
         ban: "У Вас недостаточно прав для просмотра контента"
+        gists: "К списку гистов на ГитХабе"
       create:
         success: "Тест успешно создан."
       edit:
@@ -54,6 +55,13 @@ ru:
       del_confirm: "Вы уверены?"
       back: "Назад"
       new_question: "Новый вопрос"
+    gists:
+      index:
+        header: "Гисты на ГитХабе"
+        user: "Почта пользователя"
+        question: "Вопрос"
+        link: "Ссылка на гист"
+        status: "Статус запроса"
   tests:
     test:
       start: "Начать тест"
@@ -91,6 +99,12 @@ ru:
       question_num: "Вопрос № "
       from: " из"
       next: "Следующий вопрос"
+    gist:
+      success: "Гист успешно создан"
+      failure: "Во время сохранения гиста произошла ошибка"
+      description: "Вопрос теста \"%{test}\" с сайта Thinknetica TestGuru"
+      answers: "Ответы:"
+      view_gist: "Посмотреть Gist на GitHub"
   helpers:
     submit:
       test:

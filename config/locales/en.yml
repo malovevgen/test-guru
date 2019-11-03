@@ -28,6 +28,7 @@ en:
         new_test: "Create test"
         actions: "Actions"
         ban: "You are not authorized to view this page"
+        gists: "To the list of gists on Github"
       create:
         success: "Test was successfully created."
       edit:
@@ -52,6 +53,12 @@ en:
       del_confirm: "Are you sure?"
       back: "Back"
       new_question: "New question"
+    gists:
+      index:
+        header: "GitHub Gists"
+        user: "Email of user" 
+        question: "Question"
+        link: "GitHub link"
   tests:
     test:
       start: "To start the test"
@@ -86,7 +93,12 @@ en:
       question_num: "Question № "
       from: " from"
       next: "Next question"
-
+    gist:
+      success: "Gist was successfully created <a href='%{gist_url}' target='_blank'>Link</a>"
+      failure: "An error occured while saving gist"
+      description: "A question about \"%{test}\" from Thinknetica TestGuru"
+      answers: "Answers:"
+      view_gist: "View Gist on GitHub"
   helpers:
     submit:
       test:

@@ -1,6 +1,9 @@
 <div class="row justify-content-center mt-3">
   <div class="col col-md-4"><h1><%= t('.header') %></h1></div>
-  <div class="col-12"><%= link_to t('.new_test'), new_admin_test_path %>
+  <div class="col-12">
+    <%= link_to t('.new_test'), new_admin_test_path %>
+    <p> <%= link_to t('.gists'), admin_gists_path %></p>
+
     <table class="table table-striped">
       <thead>
       <tr>
