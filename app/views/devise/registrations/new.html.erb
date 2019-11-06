@@ -8,7 +8,7 @@
     <%= f.text_field :first_name, autocomplete: "first_name"   %>
   </div>
 
-  <div class="field">
+  <div class="confirmation">
     <%= f.label :last_name, t('.last_name') %><br>
     <%= f.text_field :last_name, autocomplete:  "last_name" %>
   </div>
@@ -26,9 +26,11 @@
     <%= f.password_field :password, autocomplete: "new-password" %>
   </div>
 
-  <div class="field">
+  <div class="field check-pass">
     <%= f.label :password_confirmation, t('.password_confirmation') %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= octicon 'thumbsup', class: 'text-success hide' %>
+    <%= octicon 'thumbsdown', class: 'text-danger hide' %>
   </div>
 
   <div class="actions">
