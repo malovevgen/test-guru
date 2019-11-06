@@ -9,23 +9,28 @@ function passwordCheck() {
   var confirmation = document.getElementById('user_password_confirmation');
   var match = document.querySelector('.octicon-thumbsup').classList;
   var notMatch = document.querySelector('.octicon-thumbsdown').classList;
+  function confirmationRed() {
+    confirmation.classList.add('border-red');
+    confirmation.classList.remove('border-green');
+  };
+  function confirmationGreen() {
+    confirmation.classList.remove('border-red');
+    confirmation.classList.add('border-green');
+  }; 
 
   if (confirmation.value == '') {
     match.add('hide');
     notMatch.add('hide');
-    confirmation.classList.add('border-red');
-    confirmation.classList.remove('border-green');
+    confirmationRed();    
   }
   else if (confirmation.value == password.value) {
     match.remove('hide');
     notMatch.add('hide');
-    confirmation.classList.remove('border-red');
-    confirmation.classList.add('border-green');
+    confirmationGreen();
   }
   else {
     match.add('hide');
     notMatch.remove('hide');
-    confirmation.classList.add('border-red');
-    confirmation.classList.remove('border-green');
+    confirmationRed()
   }
 }
