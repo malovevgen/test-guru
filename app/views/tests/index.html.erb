@@ -4,7 +4,11 @@
     <table class="table table-striped">
       <thead>
       <tr>
-        <th><%= t('shared.index.title') %></th>
+        <th class="sort-by-title pointer">
+          <%= t('shared.index.title') %>
+          <%= octicon 'arrow-up', class: 'text-success hide' %>
+          <%= octicon 'arrow-down', class: 'text-success hide' %>
+        </th>
         <th><%= t('shared.index.level') %></th>
         <th><%= t('shared.index.category') %></th>
         <th><%= t('shared.index.author') %></th>
