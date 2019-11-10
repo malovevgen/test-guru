@@ -6,10 +6,33 @@ document.addEventListener('turbolinks:load', function () {
       controls[i].addEventListener('click', formInLineLinkHandler);
     }
   }
+
+  var errors = document.querySelector('.resource-errors');
+
+  if (errors) {
+    var resourceId = errors.dataset.resourceId;
+    formInLineHandler(resourceId);
+  }
 })
 function formInLineLinkHandler(event) {
   event.preventDefault()
 
   var testId = this.dataset.testId;
-  console.log(testId)
+  formInLineHandler(testId);
+}
+
+function formInLineHandler(testId) {
+  var link = document.querySelector('.form-inline-link[data-test-id="' + testId + '"]');
+  var formInLine = document.querySelector('.form-inline[data-test-id="' + testId + '"]');
+  var testTitle = document.querySelector('.test-title[data-test-id="' + testId + '"]');
+
+  if (formInLine.classList.contains('hide')) {
+      testTitle.classList.add('hide');
+      formInLine.classList.remove('hide');
+      link.textContent = 'Cancel';
+  } else {
+      testTitle.classList.remove('hide');
+      formInLine.classList.add('hide');
+      link.textContent = 'Edit';
+  }
 }
