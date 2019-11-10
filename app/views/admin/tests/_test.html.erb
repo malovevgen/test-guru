@@ -1,7 +1,7 @@
 <tr>
   <td>
     <%= test.title %>
-    <%= render 'form_inline', test: test %>  
+    <%= render 'form_inline', test: test == @test ? @test : test %>  
   </td>
   <td><%= test_level(test) %></td>
   <td><%= test.category_id %></td>
