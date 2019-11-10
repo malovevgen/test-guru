@@ -1,5 +1,8 @@
 <tr>
-  <td><%= test.title %></td>
+  <td>
+    <%= test.title %>
+    <%= render 'form_inline', test: test %>  
+  </td>
   <td><%= test_level(test) %></td>
   <td><%= test.category_id %></td>
   <td><%= test.author_id %></td>

@@ -44,6 +44,8 @@ ru:
         new_question: "Создать вопрос"
         questions: "Перечень вопросов"
         edit_test: "Редактировать тест"
+      form_inline:
+        submit: "Ок"
     nav:
       header: "Панель админов Тест Гуру"
       welcome: "Добро пожаловать, "
