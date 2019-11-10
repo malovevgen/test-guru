@@ -9,5 +9,7 @@ document.addEventListener('turbolinks:load', function () {
 })
 function formInLineLinkHandler(event) {
   event.preventDefault()
-  console.log('Handle form inline link')
+
+  var testId = this.dataset.testId;
+  console.log(testId)
 }
