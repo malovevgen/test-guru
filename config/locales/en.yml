@@ -93,8 +93,9 @@ en:
     show:
       current_test: "You're taking the test %{title}"
       question_num: "Question № "
-      from: " from"
+      from: "from "
       next: "Next question"
+      percent: "Percentage of completed questions"
     gist:
       success: "Gist was successfully created <a href='%{gist_url}' target='_blank'>Link</a>"
       failure: "An error occured while saving gist"
