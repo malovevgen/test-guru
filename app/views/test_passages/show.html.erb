@@ -1,35 +1,18 @@
 <h1><%= t('.current_test', title: @test_passage.test.title) %></h1>
 
 <p>
-<b><%= @test_passage.current_question.body %></b>
-</p>
-
-
-<p>
   <b>
     <%= t('.question_num') %><%= @test_passage.current_question_number %>
   </b>
-</p>
-<b>
+
+  <b>
     <%= t('.from') %><%= @test_passage.total_questions %>
-</b>
+  </b>
+</p>
 
-<!-- https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_progressbar2&stacked=h -->
-<!-- <div class="container">
-  <div class="progress">
-    <div class="progress-bar" role="progressbar" style="width:<%= @test_passage.progress %>%">
-      <%= @test_passage.progress %>%
-    </div>
-  </div>
-</div> -->
-
-<h5><%= t('.percent') %></h5>
-<div class="test-progress">
-  <%= content_tag :div,
-                  @test_passage.progress,
-                  class: 'progress-bar',
-                  data: { bar_width: @test_passage.progress } %>
-</div>
+<p>
+  <b><%= @test_passage.current_question.body %></b>
+</p>
 
 <%= form_with url: test_passage_path(@test_passage), local: true, method: :put do |form| %>
   <%= form.collection_check_boxes :answer_ids, @test_passage.current_question.answers, :id, :body, include_hidden: false do |b| %>
@@ -39,6 +22,24 @@
     </p>
   <%end %>
   <p><%= link_to t('.gist_question'), gist_test_passage_path(@test_passage), method: :post %></p>
+
+  <!-- https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_progressbar2&stacked=h -->
+<!-- <div class="container">
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" style="width:<%= @test_passage.progress %>%">
+      <%= @test_passage.progress %>%
+    </div>
+  </div>
+</div> -->
+
+<h5><%= t('.percent') %></h5>
+
+<div class="test-progress">
+  <%= content_tag :div,
+                  @test_passage.progress,
+                  class: 'progress-bar',
+                  data: { bar_width: @test_passage.progress } %>
+</div>
 
   <p><%= button_to t('.next') %></p>
 <%end %>
