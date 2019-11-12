@@ -1,8 +1,7 @@
 document.addEventListener('turbolinks:load', function () {
   var control = document.querySelector('.sort-by-title');
 
-  if (typeof control != 'undefined') {
-//https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Errors/Unexpected_type
+  if (control) {
     control.addEventListener('click', sortRowsByTitle) 
     
   }

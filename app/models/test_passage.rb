@@ -33,6 +33,10 @@ class TestPassage < ApplicationRecord
     save!
   end
 
+  def progress
+    (((current_question_number - 1).to_f / total_questions) * 100).to_i
+  end
+
   private
 
   def before_validation_set_question

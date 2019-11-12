@@ -44,6 +44,8 @@ ru:
         new_question: "Создать вопрос"
         questions: "Перечень вопросов"
         edit_test: "Редактировать тест"
+      form_inline:
+        submit: "Ок"
     nav:
       header: "Панель админов Тест Гуру"
       welcome: "Добро пожаловать, "
@@ -97,8 +99,9 @@ ru:
     show:
       current_test: "Прохождение %{title} теста"
       question_num: "Вопрос № "
-      from: " из"
+      from: "из "
       next: "Следующий вопрос"
+      percent: "Процент пройденных вопросов"
     gist:
       success: "Гист успешно создан"
       failure: "Во время сохранения гиста произошла ошибка"
