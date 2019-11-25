@@ -1,5 +1,10 @@
 <div align="center">
   <br>
+  <% if current_user.present? %>
+      <%= link_to 'Обратная связь', new_feedback_url %><br>
+  <% end %>
+
+  <br>
   <%= current_year %>
   <br>
   <%= github_url("malovevgen", "test-guru") %><br>
