@@ -84,6 +84,8 @@ en:
       category: "Category"
       author: "The author ID"
       number: "Number of questions"
+    footer:
+      feedback: "Feedback"
   test_passages:
     result:
       header: "Test %{title} was successfully completed!"

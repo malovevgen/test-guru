@@ -90,6 +90,8 @@ ru:
       category: "Категория"
       author: "Идентификатор автора "
       number: "Количество вопросов"
+    footer:
+      feedback: "Обратная связь"
   test_passages:
     result:
       header: "Тест %{title} успешно завершен"

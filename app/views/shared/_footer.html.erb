@@ -1,9 +1,6 @@
 <div align="center">
   <br>
-  <% if current_user.present? %>
-      <%= link_to 'Обратная связь', new_feedback_url %><br>
-  <% end %>
-
+   <%= link_to t('.feedback'), new_feedback_url %>
   <br>
   <%= current_year %>
   <br>
