@@ -1,7 +1,7 @@
 <tr>
   <td><%= question.body %></td>
   <td><%= link_to t('admin.shared.show'), admin_question_path(question) %></td>
-  <td><%= link_to t('admin.shared.edit'), edit_admin_question_path %></td>
+  <td><%= link_to t('admin.shared.edit'), edit_admin_question_path(question) %></td>
   <td>
     <%= link_to t('admin.shared.delete'),
                 admin_question_path(question),
