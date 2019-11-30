@@ -84,8 +84,8 @@ en:
       category: "Category"
       author: "The author ID"
       number: "Number of questions"
-    footer:
-      feedback: "Feedback"
+    feedback:
+      header: "Feedback"
   test_passages:
     result:
       header: "Test %{title} was successfully completed!"
@@ -124,4 +124,11 @@ en:
         category_id: "Category"
       question:
         body: "Text:"
-
+  feedbacks:
+    new:
+      message: "Enter your message:"
+      email: "Your email:"
+      send: "Send"
+    create:
+      message: "Your message has been sent to the administration"
+      failure: "The message is not sent. An error occurred while sending"
