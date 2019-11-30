@@ -9,13 +9,10 @@ class FeedbacksController < ApplicationController
     if @feedback.valid?
       FeedbacksMailer.send_feedback(@feedback).deliver_now
       flash.notice = t('.success')
-      redirect_to root_path
     else
       flash.alert = t('.failure')
-
-      render :new
     end
-    #redirect_to root_path
+    redirect_to root_path
   end
 
   private
