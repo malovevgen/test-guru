@@ -130,5 +130,5 @@ en:
       email: "Your email:"
       send: "Send"
     create:
-      message: "Your message has been sent to the administration"
+      success: "Your message has been sent to the administration"
       failure: "The message is not sent. An error occurred while sending"
