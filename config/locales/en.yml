@@ -13,9 +13,10 @@ en:
         correct: "Correct:"
     questions:
       show:
-        header: " Question"
+        header: " Question from test"
         answers: "Answers"
         edit_question: "Edit question"
+        new_answer: "Create new answer"
       new:
         create: "Create into test  "
         header: "new question"

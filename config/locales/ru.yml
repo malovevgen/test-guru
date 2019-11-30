@@ -13,9 +13,10 @@ ru:
         correct: "Правильность:"
     questions:
       show:
-        header: "Вопрос"
+        header: "Вопрос из теста"
         answers: "Ответы"
         edit_question: "Редактирование вопроса"
+        new_answer: "Создать новый ответ"
       new:
         create: "Создать в тесте "
         header: "новый вопрос"
