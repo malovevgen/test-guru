@@ -1,16 +1,21 @@
-<h1><%= @question.test.title %> <%= t('.header') %></h1>
-
+<h3>
+  <%= t('.header') %> "<%= @question.test.title %>": 
 <p>
   <%= @question.body %>
 </p>
+</h3>
 
-<h2><%= t('.answers') %></h2>
+<p>
+  <%= link_to t('.edit_question'), edit_admin_question_path(@question) %>
+</p>
 
-<%= link_to t('admin.shared.new_question'), new_admin_question_answer_path(@question) %>
+<h3><%= t('.answers') %></h3>
 
 <ol>
   <%= render @question.answers %>
 </ol>
 
-<%= link_to t('.edit_question'), edit_admin_question_path(@question) %> |
-<%= link_to t('admin.shared.back'), admin_test_path(@question.test) %>
+<%= link_to t('.new_answer'), new_admin_question_answer_path(@question) %>
+<p>
+ <%= link_to t('admin.shared.back'), admin_test_path(@question.test) %>
+</p>

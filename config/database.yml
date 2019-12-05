@@ -5,6 +5,7 @@
 #   gem 'sqlite3'
 #
 default: &default
+#  pool: <%= ENV.fetch("RAILS_MAX_THERADS") { 5 } %>
   adapter: postgresql
   encoding: unicode
   username: eugene

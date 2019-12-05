@@ -2,11 +2,11 @@
 
 <% if @test_passage.success? %>
   <p>
-    <%= t('.result') %> <span class="success"><%= @test_passage.percent_correct.floor %></span>%. Test passed.
+    <%= t('.result') %> <span class="success"><%= @test_passage.percent_correct.floor %></span>%. <%= t('.success')%>
   </p>
 <% else %>
   <p>
-    <%= t('.result') %> <span class="fail"><%= @test_passage.percent_correct.floor %></span>%. Test failed.
+    <%= t('.result') %> <span class="fail"><%= @test_passage.percent_correct.floor %></span>%. <%= t('.fail') %>
   </p>
 <% end %>
 <%= link_to t('.link_back'), tests_path %>

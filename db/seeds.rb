@@ -18,6 +18,14 @@ users = User.create!([
   { email: 'sidor@rambler.hn', password: '123456' }
   ])
 
+admins = Admin.create!([
+  { email: 'evgenymalov76@gmail.com',
+    first_name: 'admin',
+    last_name: 'super',
+    password: '123456',
+    password_confirmation: '123456'},
+  ])
+
 tests = Test.create!([
   { title: 'Module', level: 1, category: categories[0], author: users[0] },
   { title: 'Methods', level: 3, category: categories[0], author: users[0] },
@@ -36,7 +44,10 @@ questions = Question.create!([
   { body: 'Which ruby on Rails component creates the user interface?', test: tests[3] },
   { body: 'Which group headers, apply a Content-Length?', test: tests[2] },
   { body: 'Which objects return method "where"?', test: tests[5] },
-  { body: 'What relationship requires the creation of a join table?', test: tests[6] }
+  { body: 'What relationship requires the creation of a join table?', test: tests[6],
+  { body: 'What Does a Controller Do?', test: tests[2] },#"Controller"
+  { body: 'Why Use Validations?', test: tests[5] },#"Validations"
+  { body: 'How to include a module in model', test: tests[7] }#"Module" 
   ])
 
 answers = Answer.create!([
@@ -48,7 +59,13 @@ answers = Answer.create!([
   { body: 'Instance of ActiveRecord::Relation', correct: true, question: questions[5] },
   { body: 'Single instance of the model', correct: false, question: questions[5] },
   { body: 'has_many :through', correct: true, question: questions[6] },
-  { body: 'has_and_belongs_to_many', correct: false, question: questions[6] }
+  { body: 'has_and_belongs_to_many', correct: false, question: questions[6] },
+  { body: 'Will receive the request ', correct: true, question: questions[11] },
+  { body: 'Fetch or save data from a model', correct: true, question: questions[11] },
+  { body: 'Use a view to create HTML output', correct: true, question: questions[11] },
+  { body: 'Makes the model data available to the view', correct: true, question: questions[11] },
+  { body: 'To ensure that only valid data is saved into your database', correct: true, question: questions[12] },
+  { body: 'By using the include keyword followed by the name of your module', correct: true, question: questions[13] }
   ])
 
 testpassages = TestPassage.create!([

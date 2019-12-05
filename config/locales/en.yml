@@ -13,9 +13,10 @@ en:
         correct: "Correct:"
     questions:
       show:
-        header: " Question"
+        header: " Question from test"
         answers: "Answers"
         edit_question: "Edit question"
+        new_answer: "Create new answer"
       new:
         create: "Create into test  "
         header: "new question"
@@ -83,12 +84,14 @@ en:
       category: "Category"
       author: "The author ID"
       number: "Number of questions"
+    feedback:
+      header: "Feedback"
   test_passages:
     result:
       header: "Test %{title} was successfully completed!"
       result: "Your result: "
       success: "Test passed."
-      fail: "Try again."
+      fail: "Test failed."
       link_back: "Return to test choice"
     show:
       current_test: "You're taking the test %{title}"
@@ -121,4 +124,11 @@ en:
         category_id: "Category"
       question:
         body: "Text:"
-
+  feedbacks:
+    new:
+      message: "Enter your message:"
+      email: "Your email:"
+      send: "Send"
+    create:
+      success: "Your message has been sent to the administration"
+      failure: "The message is not sent. An error occurred while sending"

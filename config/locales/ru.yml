@@ -13,9 +13,10 @@ ru:
         correct: "Правильность:"
     questions:
       show:
-        header: "Вопрос"
+        header: "Вопрос из теста"
         answers: "Ответы"
         edit_question: "Редактирование вопроса"
+        new_answer: "Создать новый ответ"
       new:
         create: "Создать в тесте "
         header: "новый вопрос"
@@ -89,12 +90,14 @@ ru:
       category: "Категория"
       author: "Идентификатор автора "
       number: "Количество вопросов"
+    feedback: 
+      header: "Обратная связь"
   test_passages:
     result:
       header: "Тест %{title} успешно завершен"
       result: "Ваш результат: "
       success: "Тест пройден."
-      fail: "Попробуйте еще раз."
+      fail: "Тест не пройден."
       link_back: "Вернуться к выбору теста"
     show:
       current_test: "Прохождение %{title} теста"
@@ -127,5 +130,11 @@ ru:
         category_id: "Категория"
       question:
         body: "Текст вопроса:"
-
-
+  feedbacks:
+    new:
+      message: "Введите текст сообщения:"
+      email: "Ваша электронная почта:"
+      send: "Отправить"
+    create:
+      success: "Ваше сообщение отправлено администрации"
+      failure: "Сообщение не отправлено. Во время отправки произошла ошибка"

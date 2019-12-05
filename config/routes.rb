@@ -4,6 +4,10 @@ Rails.application.routes.draw do
 
   devise_for :users, path: :gurus, path_names: { sign_in: :login, sign_out: :logout}
 
+  resources :feedbacks, only: %i[new create] do
+    post :new, on: :member
+  end
+
   resources :tests, only: :index do
     post :start, on: :member
   end

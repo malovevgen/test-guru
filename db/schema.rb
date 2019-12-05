@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_25_190908) do
+ActiveRecord::Schema.define(version: 2019_11_25_203739) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "answers", force: :cascade do |t|
     t.text "body", null: false
-    t.boolean "correct", null: false
+    t.boolean "correct", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "question_id"
@@ -26,6 +26,12 @@ ActiveRecord::Schema.define(version: 2019_10_25_190908) do
 
   create_table "categories", force: :cascade do |t|
     t.text "title", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "feedbacks", force: :cascade do |t|
+    t.text "message"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -62,7 +68,7 @@ ActiveRecord::Schema.define(version: 2019_10_25_190908) do
 
   create_table "tests", force: :cascade do |t|
     t.string "title", null: false
-    t.integer "level", null: false
+    t.integer "level", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "category_id"
