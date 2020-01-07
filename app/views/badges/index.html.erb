@@ -1,0 +1,15 @@
+<h1>Tricky Badges</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Image</th>
+  </tr>
+
+  <% @badges.select { |badge| badge.status }.each do |badge| %>
+    <tr>
+      <td><%= badge.title %></td>
+      <td><%= image_tag("badges/#{badge.image_name}", width:'100px') %></td>
+    </tr>
+  <% end %>
+</table>      
