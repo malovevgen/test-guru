@@ -47,6 +47,9 @@ ru:
         edit_test: "Редактировать тест"
       form_inline:
         submit: "Ок"
+    badges:
+      edit:
+        header: "Статус значка"  
     nav:
       header: "Панель админов Тест Гуру"
       welcome: "Добро пожаловать, "

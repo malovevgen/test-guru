@@ -47,6 +47,9 @@ en:
         edit_test: "Edit test"
       form_inline:
         submit: "Ok"
+    badges:
+      edit:
+        header: "The status of the badge"        
     nav:
       header: "Test Guru Admin Panel"
     shared:
