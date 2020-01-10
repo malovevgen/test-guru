@@ -48,8 +48,9 @@ en:
       form_inline:
         submit: "Ok"
     badges:
-      edit:
-        header: "The status of the badge"        
+      form:
+        status: "The status of the badge" 
+        submit: "Save the status of badge"      
     nav:
       header: "Test Guru Admin Panel"
     shared:

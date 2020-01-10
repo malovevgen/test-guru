@@ -48,8 +48,9 @@ ru:
       form_inline:
         submit: "Ок"
     badges:
-      edit:
-        header: "Статус значка"  
+      form:
+        status: "Статус значка"
+        submit: "Сохранить статус значка"             
     nav:
       header: "Панель админов Тест Гуру"
       welcome: "Добро пожаловать, "

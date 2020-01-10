@@ -1,10 +1,10 @@
 <%= form_with model: [:admin, @badge], local: true do |form| %>
   <%= render 'shared/errors', resource: @badge %>
-
+  <%= t('.status') %>:
   <p>
-    <%= form.label :status %>:
+    <%= form.label :status %>
     <%= form.check_box :status, id: :badge_status %>
   </p>
 
-  <p><%= form.submit %></p>
+  <p><%= form.submit t('.submit')%></p>
 <% end %>
