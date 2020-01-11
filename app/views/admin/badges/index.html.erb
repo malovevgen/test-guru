@@ -3,7 +3,7 @@
   <title>table-layout</title>
   <style>
    table {
-    table-layout: fixed; /* Фиксированная ширина ячеек */
+    /*table-layout: fixed; /* Фиксированная ширина ячеек */
     width: 50%; /* Ширина таблицы */
    }
   </style>
@@ -13,13 +13,17 @@
     <th><%= t('.title') %></th>
     <th><%= t('.description') %> </th>
     <th><%= t('.image') %></th>
+    <th><%= t('.status') %></th>
+    <th><%= t('.reference') %></th>
   </tr>
 
-  <% @badges.select { |badge| badge.status }.each do |badge| %>
+  <% @badges.each do |badge| %>
     <tr>
       <td><%= badge.title %></td>
       <td><%= badge.description %> </td>
       <td><%= image_tag("badges/#{badge.image_name}", width:'100px') %></td>
+      <td><%= badge.status %> </td>
+      <td><%= link_to t('.edit_badge'), edit_admin_badge_path(badge.id) %></td>
     </tr>
   <% end %>
 </table>      

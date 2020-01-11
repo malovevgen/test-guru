@@ -30,6 +30,7 @@ en:
         actions: "Actions"
         ban: "You are not authorized to view this page"
         gists: "To the list of gists on Github"
+        badges: "To badges"
       create:
         success: "Test was successfully created."
       edit:
@@ -136,3 +137,9 @@ en:
     create:
       success: "Your message has been sent to the administration"
       failure: "The message is not sent. An error occurred while sending"
+  badges:
+    index:
+      head: "Tricky badges"
+      title: "Title" 
+      image: "Image"
+      description: "Description"   

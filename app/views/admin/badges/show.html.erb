@@ -1,0 +1,16 @@
+<h1><%= t('.header') %></h1>
+
+<p>
+  <%= @badge.description %>
+</p>
+
+<p>
+  <%= image_tag("badges/#{@badge.image_name}", width:'100px') %>
+</p>
+
+<p>
+  <b><%= t('.correct') %></b>
+  <%= @badge.status %>
+</p>
+
+<%= link_to t('admin.shared.back'), admin_badges_path %>

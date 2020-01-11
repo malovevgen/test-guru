@@ -29,7 +29,7 @@ Rails.application.routes.draw do
       end
     end
     resources :gists, only: :index
-    resources :badges, only: %i[show edit update]
+    resources :badges, only: %i[index show edit update]
   end
 
 end

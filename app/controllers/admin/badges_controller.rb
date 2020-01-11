@@ -1,6 +1,7 @@
 class Admin::BadgesController < Admin::BaseController
 
   before_action :find_badge, only: %i[show edit update]
+  before_action :find_badges, only: :index 
 
   def edit; end
 
@@ -18,6 +19,10 @@ class Admin::BadgesController < Admin::BaseController
 
   def find_badge
     @badge = Badge.find(params[:id])
+  end
+
+  def find_badges
+    @badges = Badge.all
   end
 
   def badge_params
