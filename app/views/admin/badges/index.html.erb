@@ -1,4 +1,4 @@
-<h1><%= t('.head') %></h1>
+<h1><%= t('admin.shared.badges') %></h1>
 
   <title>table-layout</title>
   <style>
@@ -13,7 +13,7 @@
     <th><%= t('.title') %></th>
     <th><%= t('.description') %> </th>
     <th><%= t('.image') %></th>
-    <th><%= t('.status') %></th>
+    <th><%= t('admin.shared.status') %></th>
     <th><%= t('.reference') %></th>
   </tr>
 
@@ -23,7 +23,9 @@
       <td><%= badge.description %> </td>
       <td><%= image_tag("badges/#{badge.image_name}", width:'100px') %></td>
       <td><%= badge.status %> </td>
-      <td><%= link_to t('.edit_badge'), edit_admin_badge_path(badge.id) %></td>
+      <td><%= link_to t('.edit_status'), edit_admin_badge_path(badge.id) %></td>
     </tr>
   <% end %>
-</table>      
+</table>
+
+<%= link_to t('admin.shared.back'), admin_tests_path %>      

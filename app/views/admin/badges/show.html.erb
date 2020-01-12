@@ -1,15 +1,15 @@
-<h1><%= t('.header') %></h1>
+<h1><%= t('admin.shared.badge') %></h1>
 
 <p>
   <%= @badge.description %>
 </p>
 
 <p>
-  <%= image_tag("badges/#{@badge.image_name}", width:'100px') %>
+  <%= image_tag("badges/#{@badge.image_name}", width:'200px') %>
 </p>
 
 <p>
-  <b><%= t('.correct') %></b>
+  <b><%= t('admin.shared.status') %></b>
   <%= @badge.status %>
 </p>
 

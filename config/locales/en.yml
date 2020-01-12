@@ -50,8 +50,13 @@ en:
         submit: "Ok"
     badges:
       form:
-        status: "The status of the badge" 
-        submit: "Save the status of badge"      
+        submit: "Save the status of badge"
+      index:
+        title: "Title"
+        description: "Description"
+        image: "Image"
+        reference: "Reference" 
+        edit_status: "Edit status"              
     nav:
       header: "Test Guru Admin Panel"
     shared:
@@ -61,6 +66,9 @@ en:
       del_confirm: "Are you sure?"
       back: "Back"
       new_question: "New question"
+      badge: "Badge"
+      badges: "Badges"
+      status: "Status"      
     gists:
       index:
         header: "GitHub Gists"

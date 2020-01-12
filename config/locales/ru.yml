@@ -50,10 +50,13 @@ ru:
         submit: "Ок"
     badges:
       form:
-        status: "Статус значка"
         submit: "Сохранить статус значка"
-      inddex:
-        head: "Доступные значки"               
+      index:
+        title: "Название"
+        description: "Описание"
+        image: "Изображение"
+        reference: "Ссылка" 
+        edit_status: "Редактировать статус"              
     nav:
       header: "Панель админов Тест Гуру"
       welcome: "Добро пожаловать, "
@@ -65,6 +68,9 @@ ru:
       del_confirm: "Вы уверены?"
       back: "Назад"
       new_question: "Новый вопрос"
+      badge: "Значок"
+      badges: "Значки"
+      status: "Статус"
     gists:
       index:
         header: "Гисты на ГитХабе"
