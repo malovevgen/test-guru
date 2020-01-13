@@ -9,7 +9,10 @@ class TestPassage < ApplicationRecord
   before_validation :before_validation_set_question, on: %i[create update]
 
   def completed?
-    current_question.nil?
+    if current_question.nil?
+      self.finality = true
+      save!
+    end
   end
 
   def total_questions
@@ -30,6 +33,8 @@ class TestPassage < ApplicationRecord
 
   def accept!(answer_ids)
     self.correct_questions += 1 if correct_answer?(answer_ids)
+    #save!
+    #self.finality = current_question.nil?
     save!
   end
 
@@ -55,7 +60,15 @@ class TestPassage < ApplicationRecord
     if new_record?
       test.questions.first
     else
-      test.questions.order(:id).where('id > ?', current_question.id).first
+      test.questions.order(:id).where('id > ?', pointer).first
+    end
+  end
+
+  def pointer
+    if current_question.present?
+      current_question.id
+    else
+      100
     end
   end
 end
