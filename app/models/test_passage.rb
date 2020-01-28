@@ -11,6 +11,10 @@ class TestPassage < ApplicationRecord
   def completed?
     if current_question.nil?
       self.finality = true
+      if success?
+        self.success = true
+        badge_is?
+      end
       save!
     end
   end
@@ -68,7 +72,31 @@ class TestPassage < ApplicationRecord
     if current_question.present?
       current_question.id
     else
-      100
+      Question.last.id + 1
+    end
+  end
+
+  def badge_is?
+    all_tests_backend_badge_is?
+    all_level_badge_is?
+    first_attempt_is?
+  end
+
+  def all_tests_backend_badge_is?
+    if Badge.where("title='AllTestsBackend' AND status=true").present?
+      #action
+    end
+  end
+
+  def all_level_badge_is?
+    if Badge.where("title='AllLevel' AND status=true").present?
+      #action
+    end
+  end
+
+  def first_attempt_is?
+    if Badge.where("title='FirstAttempt' AND status=true").present?
+      #action
     end
   end
 end
