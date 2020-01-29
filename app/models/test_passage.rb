@@ -77,15 +77,33 @@ class TestPassage < ApplicationRecord
   end
 
   def badge_is?
+    user_test_passages = TestPassage.where(user: self.user)
+    user_test_passages_true = user_test_passages.where(success: true)
+    @user_tests = user_tests(user_test_passages)
+    @user_tests_true = user_tests(user_test_passages_true)                         
     all_tests_backend_badge_is?
     all_level_badge_is?
     first_attempt_is?
   end
 
+  def user_tests(test_passages)
+    array = test_passages.pluck(:test_id).uniq
+    Test.where(id: array)
+  end
+    
   def all_tests_backend_badge_is?
     if Badge.where("title='AllTestsBackend' AND status=true").present?
-      #action
+      all_backend_array = backend_array(Test.all)
+      user_backend_array = backend_array(@user_tests_true)
+      user_backend_array == all_backend_array
     end
+  end
+
+  def backend_array(tests)
+    category_id = Category.where(title: 'Backend').ids.first
+    tests.where(category_id: category_id)
+         .pluck(:id)
+         .sort
   end
 
   def all_level_badge_is?
