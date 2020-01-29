@@ -93,22 +93,29 @@ class TestPassage < ApplicationRecord
     
   def all_tests_backend_badge_is?
     if Badge.where("title='AllTestsBackend' AND status=true").present?
-      all_backend_array = backend_array(Test.all)
-      user_backend_array = backend_array(@user_tests_true)
-      user_backend_array == all_backend_array
+      category_id = Category.where(title: 'Backend').ids.first
+      hash_conditions = { category_id: category_id }
+      comparing_arrays(hash_conditions)
     end
   end
 
-  def backend_array(tests)
-    category_id = Category.where(title: 'Backend').ids.first
-    tests.where(category_id: category_id)
+  def comparing_arrays(hash_conditions)
+    all_array = array(Test.all, hash_conditions)
+    user_array = array(@user_tests_true, hash_conditions)
+    user_array == all_array
+  end
+
+  def array(tests, hash_conditions)
+    tests.where(hash_conditions)
          .pluck(:id)
          .sort
   end
 
   def all_level_badge_is?
     if Badge.where("title='AllLevel' AND status=true").present?
-      #action
+      level = self.test.level
+      hash_conditions = { level: level }
+      comparing_arrays(hash_conditions)
     end
   end
 
