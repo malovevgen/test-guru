@@ -79,8 +79,9 @@ class TestPassage < ApplicationRecord
   def badge_is?
     user_test_passages = TestPassage.where(user: self.user)
     user_test_passages_true = user_test_passages.where(success: true)
-    @user_tests = user_tests(user_test_passages)
-    @user_tests_true = user_tests(user_test_passages_true)                         
+    user_test_passages_false = user_test_passages.where(success: false)
+    @user_tests_true = user_tests(user_test_passages_true)
+    @user_tests_false = user_tests(user_test_passages_false)
     all_tests_backend_badge_is?
     all_level_badge_is?
     first_attempt_is?
@@ -121,7 +122,8 @@ class TestPassage < ApplicationRecord
 
   def first_attempt_is?
     if Badge.where("title='FirstAttempt' AND status=true").present?
-      #action
+      hash_conditions = {}
+      comparing_arrays(hash_conditions) && @user_tests_false.nil?
     end
   end
 end
