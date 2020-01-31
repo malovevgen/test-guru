@@ -93,10 +93,34 @@ class TestPassage < ApplicationRecord
   end
     
   def all_tests_backend_badge_is?
-    if Badge.where("title='AllTestsBackend' AND status=true").present?
+    if badge_present?('AllTestsBackend') #Badge.where("title='AllTestsBackend' AND status=true").present?
       category_id = Category.where(title: 'Backend').ids.first
       hash_conditions = { category_id: category_id }
-      comparing_arrays(hash_conditions)
+      if comparing_arrays(hash_conditions)
+        create_badge_user('AllTestsBackend')
+        # BadgesUser.create!(user_id: self.user.id, badge_id: Badge.where(title:'AllTestsBackend').ids.first)
+      end
+    end
+  end
+
+  def all_level_badge_is?
+    if badge_present?('AllLevel') #Badge.where("title='AllLevel' AND status=true").present?
+      level = self.test.level
+      hash_conditions = { level: level }
+      if comparing_arrays(hash_conditions)
+        create_badge_user('AllLevel')
+        # BadgeUser.create!(user_id: self.user.id, badge_id: Badge.where(title:'AllLevel').ids.first)
+      end
+    end
+  end
+
+  def first_attempt_is?
+    if badge_present?('FirstAttempt') #Badge.where("title='FirstAttempt' AND status=true").present?
+      hash_conditions = {}
+      if comparing_arrays(hash_conditions) && @user_tests_false.nil?
+        create_badge_user('FirstAttempt')
+        # BadgeUser.create!(user_id: self.user.id, badge_id: Badge.where(title:'FirstAttempt').ids.first)
+      end
     end
   end
 
@@ -112,18 +136,11 @@ class TestPassage < ApplicationRecord
          .sort
   end
 
-  def all_level_badge_is?
-    if Badge.where("title='AllLevel' AND status=true").present?
-      level = self.test.level
-      hash_conditions = { level: level }
-      comparing_arrays(hash_conditions)
-    end
+  def badge_present?(title)
+    Badge.where("title=? AND status=true", title).present?
   end
 
-  def first_attempt_is?
-    if Badge.where("title='FirstAttempt' AND status=true").present?
-      hash_conditions = {}
-      comparing_arrays(hash_conditions) && @user_tests_false.nil?
-    end
+  def create_badge_user(title)
+    BadgesUser.create!(user_id: self.user.id, badge_id: Badge.where("title=?", title).ids.first)
   end
 end
