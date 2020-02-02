@@ -83,7 +83,7 @@ ru:
       start: "Начать тест"
     index:
       header: "Доступные тесты"
-
+      badges: "К значкам"
   shared:
     nav:
       header: "Тест Гуру"
@@ -153,7 +153,11 @@ ru:
       failure: "Сообщение не отправлено. Во время отправки произошла ошибка"
   badges:
     index:
-      head: "Доступные значки"
+      head: "Актуальные значки"
       title: "Название"
       image: "Изображение"
-      description: "Описание"    
+      description: "Описание" 
+  badges_users:
+    index:
+      head: "Мои значки" 
+      acquired: "Дата получения" 

@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   end
 
   resources :badges, only: :index
+  resources :badges_users, only: :index
 
   namespace :admin do
     resources :tests do

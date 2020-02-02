@@ -56,7 +56,7 @@ en:
         description: "Description"
         image: "Image"
         reference: "Reference" 
-        edit_status: "Edit status"              
+        edit_status: "Edit status"
     nav:
       header: "Test Guru Admin Panel"
     shared:
@@ -147,7 +147,12 @@ en:
       failure: "The message is not sent. An error occurred while sending"
   badges:
     index:
-      head: "Tricky badges"
+      head: "Appointed badges"
       title: "Title" 
       image: "Image"
-      description: "Description"   
+      description: "Description"
+  badges_users:
+    index:
+      head: "My badges" 
+      acquired: "Date of acquisition"      
+

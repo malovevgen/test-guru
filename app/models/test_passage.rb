@@ -13,7 +13,7 @@ class TestPassage < ApplicationRecord
       self.finality = true
       if success?
         self.success = true
-        badge_is?
+        badge_assignment
       end
       save!
     end
@@ -37,8 +37,6 @@ class TestPassage < ApplicationRecord
 
   def accept!(answer_ids)
     self.correct_questions += 1 if correct_answer?(answer_ids)
-    #save!
-    #self.finality = current_question.nil?
     save!
   end
 
@@ -76,15 +74,15 @@ class TestPassage < ApplicationRecord
     end
   end
 
-  def badge_is?
+  def badge_assignment
     user_test_passages = TestPassage.where(user: self.user)
     user_test_passages_true = user_test_passages.where(success: true)
     user_test_passages_false = user_test_passages.where(success: false)
     @user_tests_true = user_tests(user_test_passages_true)
     @user_tests_false = user_tests(user_test_passages_false)
-    all_tests_backend_badge_is?
-    all_level_badge_is?
-    first_attempt_is?
+    all_tests_backend_badge
+    all_level_badge
+    first_attempt
   end
 
   def user_tests(test_passages)
@@ -92,7 +90,7 @@ class TestPassage < ApplicationRecord
     Test.where(id: array)
   end
     
-  def all_tests_backend_badge_is?
+  def all_tests_backend_badge
     if badge_present?('AllTestsBackend') #Badge.where("title='AllTestsBackend' AND status=true").present?
       category_id = Category.where(title: 'Backend').ids.first
       hash_conditions = { category_id: category_id }
@@ -103,7 +101,7 @@ class TestPassage < ApplicationRecord
     end
   end
 
-  def all_level_badge_is?
+  def all_level_badge
     if badge_present?('AllLevel') #Badge.where("title='AllLevel' AND status=true").present?
       level = self.test.level
       hash_conditions = { level: level }
@@ -114,7 +112,7 @@ class TestPassage < ApplicationRecord
     end
   end
 
-  def first_attempt_is?
+  def first_attempt
     if badge_present?('FirstAttempt') #Badge.where("title='FirstAttempt' AND status=true").present?
       hash_conditions = {}
       if comparing_arrays(hash_conditions) && @user_tests_false.nil?
