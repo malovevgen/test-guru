@@ -50,7 +50,7 @@ en:
         submit: "Ok"
     badges:
       form:
-        submit: "Save the status of badge"
+        submit: "Save"
       index:
         title: "Title"
         description: "Description"

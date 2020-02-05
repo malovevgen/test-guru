@@ -50,7 +50,7 @@ ru:
         submit: "Ок"
     badges:
       form:
-        submit: "Сохранить статус значка"
+        submit: "Сохранить"
       index:
         title: "Название"
         description: "Описание"
