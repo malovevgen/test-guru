@@ -19,7 +19,10 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :badges, only: :index
+  resources :badges do
+    get :index, on: :collection
+    get :my, on: :collection
+  end
 
   namespace :admin do
     resources :tests do
@@ -29,7 +32,6 @@ Rails.application.routes.draw do
       end
     end
     resources :gists, only: :index
-    resources :badges, only: %i[new create index show edit update]
+    resources :badges, only: %i[new create index show destroy edit update]
   end
-
 end

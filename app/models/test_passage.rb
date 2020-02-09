@@ -12,15 +12,6 @@ class TestPassage < ApplicationRecord
     current_question.nil?
   end
 
-  def finality
-    self.finality = true
-    if success?
-      self.success = true
-      badge_assignment
-    end
-    save!
-  end
-
   def total_questions
     test.questions.count
   end

@@ -55,8 +55,10 @@ ru:
         title: "Название"
         description: "Описание"
         image: "Изображение"
-        reference: "Ссылка" 
-        edit_status: "Редактировать статус"              
+        reference: "Действия" 
+        new: "Создать новый значок"
+      edit:
+        header: "Редактировать значок"                
     nav:
       header: "Панель админов Тест Гуру"
       welcome: "Добро пожаловать, "
@@ -156,8 +158,10 @@ ru:
       head: "Актуальные значки"
       title: "Название"
       image: "Изображение"
-      description: "Описание" 
-  badges_users:
-    index:
+      description: "Описание"    
+    my:
       head: "Мои значки" 
-      acquired: "Дата получения" 
+      rule: "Правило"
+      value: "Значение"
+      first_attempt: "Первая попытка"
+

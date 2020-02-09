@@ -1,31 +1,27 @@
 <h1><%= t('admin.shared.badges') %></h1>
+<%= link_to t('.new'), new_admin_badge_path %>
 
   <title>table-layout</title>
   <style>
    table {
     /*table-layout: fixed; /* Фиксированная ширина ячеек */
-    width: 50%; /* Ширина таблицы */
+    width: 60%; /* Ширина таблицы */
    }
   </style>
 
 <table>
+  <thead>
   <tr>
     <th><%= t('.title') %></th>
     <th><%= t('.description') %> </th>
     <th><%= t('.image') %></th>
     <th><%= t('admin.shared.status') %></th>
-    <th><%= t('.reference') %></th>
+    <th colspan="3"><%= t('.reference') %></th>
   </tr>
-
-  <% @badges.each do |badge| %>
-    <tr>
-      <td><%= badge.title %></td>
-      <td><%= badge.description %> </td>
-      <td><%= image_tag("badges/#{badge.image_name}", width:'100px') %></td>
-      <td><%= badge.status %> </td>
-      <td><%= link_to t('.edit_status'), edit_admin_badge_path(badge.id) %></td>
-    </tr>
-  <% end %>
+  </thead>
+  <tbody>
+    <%= render @badges %>
+  </tbody>
 </table>
 
 <%= link_to t('admin.shared.back'), admin_tests_path %>      
