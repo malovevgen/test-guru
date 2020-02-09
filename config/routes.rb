@@ -19,7 +19,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :badges do
+  resources :badges, only: %i[index my] do
     get :index, on: :collection
     get :my, on: :collection
   end
