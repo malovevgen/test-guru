@@ -24,6 +24,12 @@ class TestPassage < ApplicationRecord
     percent_correct >= SUCCESS_RATE
   end
 
+  def success!
+    if success?
+      update(finality: true, success: true)
+    end
+  end
+
   def current_question_number
     test.questions.order(:id).where('id < ?', current_question.id).count + 1
   end

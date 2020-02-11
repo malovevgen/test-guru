@@ -8,14 +8,13 @@ class BadgeService
   end
 
   def select_badges
-    @test_passage.update(finality: true, success: true)
-    #@test_passage.update(success: true)
+    @test_passage.success!
     select_tests
     @badges
   end
 
   def select_tests
-    test_passages = TestPassage.where(user: @user)
+    test_passages = @user.test_passages
     true_test_passages = test_passages.where(success: true)
     false_test_passages = test_passages.where(success: false)
     @true_tests = tests(true_test_passages)

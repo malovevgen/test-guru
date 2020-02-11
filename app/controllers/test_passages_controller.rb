@@ -12,7 +12,7 @@ class TestPassagesController < ApplicationController
 
     if @test_passage.completed?
       # current_user.badges << 
-      current_user.badges.concat(BadgeService.new(@test_passage).select_badges) if @test_passage.success?
+      current_user.badges.concat(BadgeService.new(@test_passage).select_badges)# if @test_passage.success?
       TestsMailer.completed_test(@test_passage).deliver_now
       redirect_to result_test_passage_path(@test_passage)
     else

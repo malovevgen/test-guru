@@ -2,10 +2,15 @@ en:
   activerecord:
     models:
       test: "Test"
+      badge: "Badge"
 
     attributes:
       test:
         title: "Title"
+      badge:
+        title: "Title"
+        image_name: "File name"
+        rule: "Rule"  
 
     errors:
       messages:
