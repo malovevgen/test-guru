@@ -12,11 +12,11 @@
 
   <p>
     <%= form.label :image_name %>
-    <%= form.text_field :image_name, id: :badge_image_name %>
+    <%= form.collection_select :image_name, Badge.all, :id, :image_name %>
   </p>
   <p>
     <%= form.label :rule %>
-    <%= form.text_field :rule, id: :badge_rule %>
+    <%= form.collection_select :rule, Badge.all, :id, :rule %>
   </p>
   <p>
     <%= form.label :value %>
