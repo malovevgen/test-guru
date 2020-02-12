@@ -9,7 +9,7 @@ class BadgeService
   end
 
   def select_badges
-    @test_passage.success!
+    #@test_passage.success!
     select_tests
     @badges_actual.select { |badge| RULE.include?(badge.rule) }.each do |badge|
       send(badge.rule, badge)
@@ -28,7 +28,6 @@ class BadgeService
     false_test_passages = test_passages.where(success: false)
     @true_tests = tests(true_test_passages)
     @false_tests_ = tests(false_test_passages)
-    # badge_assignment
   end
 
   def tests(test_passages)
