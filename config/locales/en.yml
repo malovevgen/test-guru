@@ -51,7 +51,7 @@ en:
     badges:
       form:
         submit: "Save"
-      index:
+      
         title: "Title"
         description: "Description"
         image: "Image"

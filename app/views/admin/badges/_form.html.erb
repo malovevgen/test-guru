@@ -6,7 +6,7 @@
   </p>
 
   <p>
-    <%= form.label :description %>
+    <%= form.label :description %> 
     <%= form.text_field :description, id: :badge_description %>
   </p>
 
@@ -16,7 +16,7 @@
   </p>
   <p>
     <%= form.label :rule %>
-    <%= form.collection_select :rule, Badge.all, :id, :rule %>
+    <%= form.select :rules, options_for_select(badge_rules) %>
   </p>
   <p>
     <%= form.label :value %>

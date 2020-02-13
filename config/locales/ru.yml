@@ -58,7 +58,7 @@ ru:
         reference: "Действия" 
         new: "Создать новый значок"
       edit:
-        header: "Редактировать значок"                
+        header: "Редактировать значок"              
     nav:
       header: "Панель админов Тест Гуру"
       welcome: "Добро пожаловать, "
@@ -138,6 +138,10 @@ ru:
         update: "Обновить ответ"
     select:
       prompt: "Выберите категорию"
+      rules:
+        category: "Выполнены все тесты категории"
+        level: "Выполнены все тесты уровня"
+        first_attempt: "Выполнены все тесты с первой попытки"
     label:
       test:
         title: "Название"
@@ -145,6 +149,11 @@ ru:
         category_id: "Категория"
       question:
         body: "Текст вопроса:"
+      badge:
+        description: "Описание"
+        value: "Значение"
+        first_attempt: "Первая попытка"
+        status: "Статус"          
   feedbacks:
     new:
       message: "Введите текст сообщения:"
@@ -164,4 +173,5 @@ ru:
       rule: "Правило"
       value: "Значение"
       first_attempt: "Первая попытка"
+      
 

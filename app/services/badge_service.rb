@@ -1,5 +1,5 @@
 class BadgeService
-  RULE = %W[category level]
+  RULES = %W[category level first_attempt]
 
   def initialize(test_passage)
     @test_passage = test_passage
@@ -11,7 +11,7 @@ class BadgeService
   def select_badges
     #@test_passage.success!
     select_tests
-    @badges_actual.select { |badge| RULE.include?(badge.rule) }.each do |badge|
+    @badges_actual.select { |badge| RULES.include?(badge.rule) }.each do |badge|
       send(badge.rule, badge)
       condition = {}
       condition[@key.to_sym] = @value
