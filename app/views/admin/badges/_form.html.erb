@@ -16,7 +16,13 @@
   </p>
   <p>
     <%= form.label :rule %>
-    <%= form.select :rules, options_for_select(badge_rules) %>
+    <%= form.select :rule, options_for_select(
+                                              [
+                                                [t(".category"), :category],
+                                                [t(".level"), :level],
+                                                [t(".first_attempt"), :first_attempt]
+                                              ]
+                                               ) %>
   </p>
   <p>
     <%= form.label :value %>

@@ -51,6 +51,9 @@ en:
     badges:
       form:
         submit: "Save"
+        category: "All category tests have been completed"
+        level: "All level tests have been completed"
+        first_attempt: "All tests were completed on the first attempt"
       
         title: "Title"
         description: "Description"

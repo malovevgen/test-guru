@@ -1,8 +1,19 @@
 <h1><%= t('admin.shared.badge') %> <%=@badge.title %> </h1>
 
 <p>
+  <b><%= t('helpers.label.badge.description') %></b>
   <%= @badge.description %>
 </p>
+
+<p>
+  <b><%= t('.rule') %></b>
+  <%= @badge.rule %>
+</p>
+
+<p>
+  <b><%= t('helpers.label.badge.value') %></b>
+  <%= @badge.value %>
+</p>  
 
 <p>
   <%= image_tag("badges/#{@badge.image_name}", width:'200px') %>
