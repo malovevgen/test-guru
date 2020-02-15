@@ -25,9 +25,8 @@ class TestPassage < ApplicationRecord
   end
 
   def success!
-    if success?
-      update(finality: true, success: true)
-    end
+    update(finality: true)
+    update(success: true) if success?
   end
 
   def current_question_number
@@ -37,6 +36,7 @@ class TestPassage < ApplicationRecord
   def accept!(answer_ids)
     self.correct_questions += 1 if correct_answer?(answer_ids)
     save!
+    success! if completed?
   end
 
   def progress

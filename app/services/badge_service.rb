@@ -9,13 +9,11 @@ class BadgeService
   end
 
   def select_badges
-    #@test_passage.success!
-    select_tests
-    @badges_actual.select { |badge| RULES.include?(badge.rule) }.each do |badge|
-      send(badge.rule, badge)
-      condition = {}
-      condition[@key.to_sym] = @value
-      @badges << badge if comparing_arrays(condition) && (badge.first_attempt == false || @false_tests.nil?)
+    if @test_passage.success!
+      select_tests
+      @badges_actual.select { |badge| RULES.include?(badge.rule) }.each do |badge|
+        @badges << badge if send(badge.rule, badge)
+      end
     end
     @badges
   end
@@ -25,7 +23,7 @@ class BadgeService
   def select_tests
     test_passages = @user.test_passages
     true_test_passages = test_passages.where(success: true)
-    false_test_passages = test_passages.where(success: false)
+    false_test_passages = test_passages.where("finality=true AND success=false")
     @true_tests = tests(true_test_passages)
     @false_tests_ = tests(false_test_passages)
   end
@@ -35,15 +33,27 @@ class BadgeService
     Test.where(id: array)
   end
 
-  def category (badge)
-    @key = 'category_id'
-    @value = Category.where(title: badge.value).ids.first
+  def category(badge)
+    key = 'category_id'
+    value = Category.where(title: badge.value).ids.first
+    condition(badge, key, value)
   end
 
-  def level (badge)
-    @key= 'level'
-    @value = badge.value
-  end 
+  def level(badge)
+    key = 'level'
+    value = badge.value
+    condition(badge, key, value)
+  end
+
+  def first_attempt(badge)
+    comparing_arrays({})
+  end
+
+  def condition(badge, key, value)
+    condition = {}
+    condition[key.to_sym] = value
+    comparing_arrays(condition) && (badge.first_attempt == false || @false_tests.nil?)
+  end
 
   def comparing_arrays(condition)
     all_array = array(Test.all, condition)
