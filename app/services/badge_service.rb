@@ -46,7 +46,7 @@ class BadgeService
   end
 
   def first_attempt(badge)
-    comparing_arrays({})
+    comparing_arrays({}) && @false_tests.nil?
   end
 
   def condition(badge, key, value)
