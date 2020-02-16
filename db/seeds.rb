@@ -9,7 +9,7 @@
 categories = Category.create!([
   { title: 'Ruby' },
   { title: 'HTTP' },
-  { title: 'Ruby on Rails' }
+  { title: 'Backend' }
   ])
 
 users = User.create!([
@@ -44,7 +44,7 @@ questions = Question.create!([
   { body: 'Which ruby on Rails component creates the user interface?', test: tests[3] },
   { body: 'Which group headers, apply a Content-Length?', test: tests[2] },
   { body: 'Which objects return method "where"?', test: tests[5] },
-  { body: 'What relationship requires the creation of a join table?', test: tests[6],
+  { body: 'What relationship requires the creation of a join table?', test: tests[6] },
   { body: 'What Does a Controller Do?', test: tests[2] },#"Controller"
   { body: 'Why Use Validations?', test: tests[5] },#"Validations"
   { body: 'How to include a module in model', test: tests[7] }#"Module" 

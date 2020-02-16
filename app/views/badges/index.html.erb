@@ -15,7 +15,7 @@
     <th><%= t('.image') %></th>
   </tr>
 
-  <% @badges.select { |badge| badge.status }.each do |badge| %>
+  <% @badges.each do |badge| %>
     <tr>
       <td><%= badge.title %></td>
       <td><%= badge.description %> </td>

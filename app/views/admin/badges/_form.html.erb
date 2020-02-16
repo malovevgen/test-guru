@@ -16,26 +16,11 @@
   </p>
   <p>
     <%= form.label :rule %>
-    <%= form.select :rule, options_for_select(
-                                              [
-                                                [t(".category"), :category],
-                                                [t(".level"), :level],
-                                                [t(".first_attempt"), :first_attempt]
-                                              ]
-                                               )%>
+    <%= form.select :rule, options_for_select(rules, @badge.rule) %>
   </p>
   <p>
     <%= form.label :value %>
     <%= form.text_field :value, id: :badge_rule %>
   </p>
-  <p>
-    <%= form.label :first_attempt %>
-    <%= form.check_box :first_attempt, id: :badge_first_attempt %>
-  </p>
-  <p>
-    <%= form.label :status %>
-    <%= form.check_box :status, id: :badge_status %>
-  </p>
-
   <p><%= form.submit t('.submit')%></p>
 <% end %>

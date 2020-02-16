@@ -3,5 +3,5 @@ class Badge < ApplicationRecord
   has_many :users, through: :badges_users
 
   validates :title, :image_name, presence: true
-  validates_uniqueness_of :rule, scope: %i[value first_attempt]
+  validates_uniqueness_of :rule, scope: %i[value]
 end
