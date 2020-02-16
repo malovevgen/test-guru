@@ -8,18 +8,10 @@
   </style>
 
 <table>
-  <tr>
-    <th><%= t('.head') %></th>
-    <th><%= t('.rule') %></th>
-    <th><%= t('.value') %></th>
-    <th><%= t('.first_attempt') %></th>
 
   <% current_user.badges.each do |badge| %>
     <tr>
       <td><%= image_tag("badges/#{Badge.find(badge.id).image_name}", width:'100px') %></td>
-      <td><%= badge.rule %></td>
-      <td><%= badge.value %></td>
-      <td><%= badge.first_attempt %></td>
     </tr>
   <% end %>
 </table>     
