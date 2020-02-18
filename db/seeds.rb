@@ -12,11 +12,6 @@ categories = Category.create!([
   { title: 'Backend' }
   ])
 
-users = User.create!([
-  { email: 'ivan@rambler.hn', password: '123456' },
-  { email: 'peter@rambler.hn', password: '123456' },
-  { email: 'sidor@rambler.hn', password: '123456' }
-  ])
 
 admins = Admin.create!([
   { email: 'evgenymalov76@gmail.com',
