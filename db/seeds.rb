@@ -13,13 +13,13 @@ categories = Category.create!([
   ])
 
 
-admins = Admin.create!([
-  { email: 'evgenymalov76@gmail.com',
-    first_name: 'admin',
-    last_name: 'super',
-    password: '123456',
-    password_confirmation: '123456'},
-  ])
+#admins = Admin.create!([
+ # { email: 'evgenymalov76@gmail.com',
+ #   first_name: 'admin',
+  #  last_name: 'super',
+    #password: '123456',
+ #   password_confirmation: '123456'},
+ # ])
 
 tests = Test.create!([
   { title: 'Module', level: 1, category: categories[0], author: users[0] },
