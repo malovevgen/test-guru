@@ -8,16 +8,16 @@
 
 categories = Category.create!([
   { title: 'Ruby' },
-  { title: 'HTTP' },
-  { title: 'Backend' }
+  { title: 'HTTP' }#,
+  #{ title: 'Backend' }
   ])
 
 
 #admins = Admin.create!([
  # { email: 'evgenymalov76@gmail.com',
  #   first_name: 'admin',
-  #  last_name: 'super',
-    #password: '123456',
+#last_name: 'super',
+ #   password: '123456',
  #   password_confirmation: '123456'},
  # ])
 
