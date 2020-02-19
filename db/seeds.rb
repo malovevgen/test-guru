@@ -12,19 +12,13 @@ categories = Category.create!([
   { title: 'Backend' }
   ])
 
-#users = User.create!([
-  #{ email: 'ivan@rambler.hn', password: '123456' },
-  #{ email: 'peter@rambler.hn', password: '123456' },
-  #{ email: 'sidor@rambler.hn', password: '123456' }
-  #])
-
-admins = Admin.create!([
-  { email: 'evgenymalov76@gmail.com',
-    first_name: 'admin',
-    last_name: 'super',
-    password: '123456',
-    password_confirmation: '123456'},
-  ])
+# admins = Admin.create!([
+#  { email: 'evgenymalov76@gmail.com',
+#    first_name: 'admin',
+#    last_name: 'super',
+#    password: '123456',
+#    password_confirmation: '123456'},
+#  ])
 
 tests = Test.create!([
   { title: 'Module', level: 1, category: categories[0], author: users[0] },
@@ -38,6 +32,7 @@ tests = Test.create!([
   ])
 
 questions = Question.create!([
+  { body: 'How to include a module in model', test: tests[0] }, #"Module" 
   { body: 'What method removes the last element in an array and returns it?', test: tests[1] },
   { body: 'Which statement is used to define methods that take an unlimited number of arguments?', test: tests[1] },
   { body: 'which ruby on rails application directory contains external modules?', test: tests[3] },
@@ -47,7 +42,6 @@ questions = Question.create!([
   { body: 'What relationship requires the creation of a join table?', test: tests[6] },
   { body: 'What Does a Controller Do?', test: tests[2] },#"Controller"
   { body: 'Why Use Validations?', test: tests[5] },#"Validations"
-  { body: 'How to include a module in model', test: tests[7] }#"Module" 
   ])
 
 answers = Answer.create!([
