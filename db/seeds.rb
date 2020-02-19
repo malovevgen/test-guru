@@ -20,6 +20,12 @@ categories = Category.create!([
 #    password_confirmation: '123456'},
 #  ])
 
+users = User.create!([
+  { email: 'ivan@rambler.hn', password: '123456' },
+  { email: 'peter@rambler.hn', password: '123456' },
+  { email: 'sidor@rambler.hn', password: '123456' }
+  ])
+
 tests = Test.create!([
   { title: 'Module', level: 1, category: categories[0], author: users[0] },
   { title: 'Methods', level: 3, category: categories[0], author: users[0] },
