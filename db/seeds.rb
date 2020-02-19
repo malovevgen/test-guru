@@ -12,19 +12,19 @@ categories = Category.create!([
   { title: 'Backend' }
   ])
 
-users = User.create!([
+#users = User.create!([
   #{ email: 'ivan@rambler.hn', password: '123456' },
-  { email: 'peter@rambler.hn', password: '123456' },
-  { email: 'sidor@rambler.hn', password: '123456' }
-  ])
+  #{ email: 'peter@rambler.hn', password: '123456' },
+  #{ email: 'sidor@rambler.hn', password: '123456' }
+  #])
 
-#admins = Admin.create!([
-#  { email: 'evgenymalov76@gmail.com',
-#    first_name: 'admin',
-#    last_name: 'super',
-#    password: '123456',
-#    password_confirmation: '123456'},
-#  ])
+admins = Admin.create!([
+  { email: 'evgenymalov76@gmail.com',
+    first_name: 'admin',
+    last_name: 'super',
+    password: '123456',
+    password_confirmation: '123456'},
+  ])
 
 tests = Test.create!([
   { title: 'Module', level: 1, category: categories[0], author: users[0] },
@@ -68,13 +68,3 @@ answers = Answer.create!([
   { body: 'By using the include keyword followed by the name of your module', correct: true, question: questions[13] }
   ])
 
-testpassages = TestPassage.create!([
-  { user: users[0], test: tests[0] },
-  { user: users[0], test: tests[1] },
-  { user: users[0], test: tests[2] },
-  { user: users[1], test: tests[1] },
-  { user: users[1], test: tests[2] },
-  { user: users[2], test: tests[3] },
-  { user: users[2], test: tests[4] },
-  { user: users[2], test: tests[4] }
-  ])
