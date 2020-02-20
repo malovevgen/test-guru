@@ -4,15 +4,12 @@ class BadgeService
   def initialize(test_passage)
     @test_passage = test_passage
     @test_passages = @test_passage.user.test_passages
-    @badges = Badge.all
   end
 
   def select_badges
-    badges = []
-    @badges.each do |badge|
-      badges << badge if send(badge.rule, badge)
+    Badge.all.select do |badge|
+      send(badge.rule, badge)
     end
-    badges
   end
 
   private

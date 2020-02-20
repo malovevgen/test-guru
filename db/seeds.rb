@@ -21,27 +21,27 @@ categories = Category.create!([
 #  ])
 
 
-tests = Test.create!([
-  { title: 'Module', level: 1, category: categories[0], author: users[0] },
-  { title: 'Methods', level: 3, category: categories[0], author: users[0] },
-  { title: 'Header', level: 2, category: categories[1], author: users[0]  },
-  { title: 'Components', level: 1, category: categories[2], author: users[0] },
-  { title: 'Controller', level: 2, category: categories[2], author: users[0] },
-  { title: 'QueryInterface', level: 5, category: categories[2], author: users[0] },
-  { title: 'Associations', level: 5, category: categories[2], author: users[0] },
-  { title: 'Validations', level: 5, category: categories[2], author: users[0] }
-  ])
+#tests = Test.create!([
+  #{ title: 'Module', level: 1, category: categories[0], author: users[0] },
+  #{ title: 'Methods', level: 3, category: categories[0], author: users[0] },
+  #{ title: 'Header', level: 2, category: categories[1], author: users[0]  },
+  #{ title: 'Components', level: 1, category: categories[2], author: users[0] },
+  #{ title: 'Controller', level: 2, category: categories[2], author: users[0] },
+  #{ title: 'QueryInterface', level: 5, category: categories[2], author: users[0] },
+  #{ title: 'Associations', level: 5, category: categories[2], author: users[0] },
+  #{ title: 'Validations', level: 5, category: categories[2], author: users[0] }
+  #])
 
 questions = Question.create!([
-  { body: 'How to include a module in model', test: tests[0] }, #"Module" 
-  { body: 'What method removes the last element in an array and returns it?', test: tests[1] },
-  { body: 'Which statement is used to define methods that take an unlimited number of arguments?', test: tests[1] },
+  #{ body: 'How to include a module in model', test: tests[0] }, #"Module" 
+  #{ body: 'What method removes the last element in an array and returns it?', test: tests[1] },
+  #{ body: 'Which statement is used to define methods that take an unlimited number of arguments?', test: tests[1] },
   { body: 'which ruby on rails application directory contains external modules?', test: tests[3] },
   { body: 'Which ruby on Rails component creates the user interface?', test: tests[3] },
-  { body: 'Which group headers, apply a Content-Length?', test: tests[2] },
+  #{ body: 'Which group headers, apply a Content-Length?', test: tests[2] },
   { body: 'Which objects return method "where"?', test: tests[5] },
   { body: 'What relationship requires the creation of a join table?', test: tests[6] },
-  { body: 'What Does a Controller Do?', test: tests[2] },#"Controller"
+  #{ body: 'What Does a Controller Do?', test: tests[2] },#"Controller"
   { body: 'Why Use Validations?', test: tests[5] },#"Validations"
   ])
 
