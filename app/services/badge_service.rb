@@ -41,9 +41,9 @@ class BadgeService
     Test.where(id: actual_test_passages(badge).where(success: true).pluck(:test_id).uniq)
   end
 
-  def false_tests(badge)
-    Test.where(id: actual_test_passages(badge).where("finality=true AND success=false").pluck(:test_id).uniq)    
-  end
+  # def false_tests(badge) # Используется если бейдж выдается после прохождения всех тестов с первой попытки
+  #  Test.where(id: actual_test_passages(badge).where("finality=true AND success=false").pluck(:test_id).uniq)
+  # end
 
   def actual_test_passages(badge)
     if @user.badges.ids.include?(badge.id)
