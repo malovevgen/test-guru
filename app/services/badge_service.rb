@@ -15,16 +15,20 @@ class BadgeService
   private
 
   def category(badge)
-    value = Category.where(title: badge.value).ids.first #Category.id
-    if  Test.where(category_id: value).ids.include?(@test_passage.test_id)
-      true_tests.where(category_id: value).pluck(:id).sort == Test.where(category_id: value).pluck(:id).sort
-    end
+    category_id = Category.find_by(title: badge.value).id
+    # if  Test.where(category_id: category_id).ids.include?(@test_passage.test_id)
+    return unless @test_passage.test.category.id == category_id
+
+    true_tests.where(category_id: category_id).pluck(:id).sort == Test.where(category_id: category_id).pluck(:id).sort
+    #end
   end
 
   def level(badge)
-    if Test.where(level: badge.value).ids.include?(@test_passage.test_id)
-      true_tests.where(level: badge.value).pluck(:id).sort == Test.where(level: badge.value).pluck(:id).sort
-    end
+    # if Test.where(level: badge.value).ids.include?(@test_passage.test_id)
+    return unless @test_passage.test.level == badge.value
+
+    true_tests.where(level: badge.value).pluck(:id).sort == Test.where(level: badge.value).pluck(:id).sort
+    #end
   end
 
   def first_attempt(badge)
