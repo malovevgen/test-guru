@@ -1,0 +1,27 @@
+<h1><%= t('.head') %></h1>
+
+  <title>table-layout</title>
+  <style>
+   table {
+    table-layout: fixed; /* Фиксированная ширина ячеек */
+    width: 50%; /* Ширина таблицы */
+   }
+  </style>
+
+<table>
+  <tr>
+    <th><%= t('.title') %></th>
+    <th><%= t('.description') %> </th>
+    <th><%= t('.image') %></th>
+  </tr>
+
+  <% @badges.each do |badge| %>
+    <tr>
+      <td><%= badge.title %></td>
+      <td><%= badge.description %> </td>
+      <td><%= image_tag("badges/#{badge.image_name}", width:'100px') %></td>
+    </tr>
+  <% end %>
+</table> 
+   
+<%= link_to t('admin.shared.back'), tests_path %>

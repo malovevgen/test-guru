@@ -1,0 +1,26 @@
+
+<h1><%= t('.head') %></h1>
+
+  <title>table-layout</title>
+  <style>
+   table {
+    width: 50%;
+   }
+  </style>
+
+<table>
+  <tr>
+    <th><%= t('.acquired') %></th>
+    <th><%= t('admin.shared.badges') %></th>
+  </tr>
+
+  <% @badges_users.where(user_id: current_user.id).each do |badges_users| %>
+    <tr>
+      <td><%= badges_users.created_at %></td>
+      <td><%= image_tag("badges/#{Badge.find(badges_users.badge_id).image_name}", width:'100px') %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to t('admin.shared.back'), admin_tests_path %>      
+

@@ -30,6 +30,7 @@ ru:
         actions: "Действия"
         ban: "У Вас недостаточно прав для просмотра контента"
         gists: "К списку гистов на ГитХабе"
+        badges: "К значкам"
       create:
         success: "Тест успешно создан."
       edit:
@@ -47,6 +48,19 @@ ru:
         edit_test: "Редактировать тест"
       form_inline:
         submit: "Ок"
+    badges:
+      form:
+        submit: "Сохранить"
+      index:
+        title: "Название"
+        description: "Описание"
+        image: "Изображение"
+        reference: "Действия" 
+        new: "Создать новый значок"
+      edit:
+        header: "Редактировать значок"
+      show:
+        rule: "Правило"              
     nav:
       header: "Панель админов Тест Гуру"
       welcome: "Добро пожаловать, "
@@ -58,6 +72,9 @@ ru:
       del_confirm: "Вы уверены?"
       back: "Назад"
       new_question: "Новый вопрос"
+      badge: "Значок"
+      badges: "Значки"
+      status: "Статус"
     gists:
       index:
         header: "Гисты на ГитХабе"
@@ -70,7 +87,7 @@ ru:
       start: "Начать тест"
     index:
       header: "Доступные тесты"
-
+      badges: "К значкам"
   shared:
     nav:
       header: "Тест Гуру"
@@ -130,6 +147,11 @@ ru:
         category_id: "Категория"
       question:
         body: "Текст вопроса:"
+      badge:
+        description: "Описание"
+        value: "Значение"
+        first_attempt: "Первая попытка"
+        status: "Статус"          
   feedbacks:
     new:
       message: "Введите текст сообщения:"
@@ -138,3 +160,17 @@ ru:
     create:
       success: "Ваше сообщение отправлено администрации"
       failure: "Сообщение не отправлено. Во время отправки произошла ошибка"
+  badges:
+    index:
+      head: "Актуальные значки"
+      title: "Название"
+      image: "Изображение"
+      description: "Описание"    
+    my:
+      head: "Мои значки" 
+      rule: "Правило"
+      value: "Значение"
+    rules:
+      category: "Выполнены все тесты категории"
+      level: "Выполнены все тесты уровня"
+      first_attempt: "Выполнены все тесты с первой попытки"

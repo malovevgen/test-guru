@@ -19,6 +19,11 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :badges, only: %i[index my] do
+    get :index, on: :collection
+    get :my, on: :collection
+  end
+
   namespace :admin do
     resources :tests do
       patch :update_inline, on: :member
@@ -27,6 +32,6 @@ Rails.application.routes.draw do
       end
     end
     resources :gists, only: :index
+    resources :badges, only: %i[new create index show destroy edit update]
   end
-
 end

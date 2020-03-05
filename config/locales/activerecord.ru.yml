@@ -3,11 +3,16 @@ ru:
   activerecord:
     models:
       test: "Тест"
+      badge: "Значок"
 
     attributes:
       test:
         title: "Название"
         category: "Категория"
+      badge:
+        title: "Название"
+        image_name: "Имя файла"
+        rule: "Правило"  
 
     errors:
       messages:

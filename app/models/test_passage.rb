@@ -24,6 +24,11 @@ class TestPassage < ApplicationRecord
     percent_correct >= SUCCESS_RATE
   end
 
+  def success!
+    update(finality: true)
+    update(success: true) if success?
+  end
+
   def current_question_number
     test.questions.order(:id).where('id < ?', current_question.id).count + 1
   end
@@ -31,6 +36,7 @@ class TestPassage < ApplicationRecord
   def accept!(answer_ids)
     self.correct_questions += 1 if correct_answer?(answer_ids)
     save!
+    success! if completed?
   end
 
   def progress
@@ -55,7 +61,15 @@ class TestPassage < ApplicationRecord
     if new_record?
       test.questions.first
     else
-      test.questions.order(:id).where('id > ?', current_question.id).first
+      test.questions.order(:id).where('id > ?', pointer).first
+    end
+  end
+
+  def pointer
+    if current_question.present?
+      current_question.id
+    else
+      Question.last.id + 1
     end
   end
 end

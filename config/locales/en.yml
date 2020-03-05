@@ -30,6 +30,7 @@ en:
         actions: "Actions"
         ban: "You are not authorized to view this page"
         gists: "To the list of gists on Github"
+        badges: "To badges"
       create:
         success: "Test was successfully created."
       edit:
@@ -47,6 +48,20 @@ en:
         edit_test: "Edit test"
       form_inline:
         submit: "Ok"
+    badges:
+      form:
+        submit: "Save"
+        category: "All category tests have been completed"
+        level: "All level tests have been completed"
+        first_attempt: "All tests were completed on the first attempt"
+      
+        title: "Title"
+        description: "Description"
+        image: "Image"
+        reference: "Actions" 
+        new: "Create a new badge"
+      edit:
+        header: "Edit a badge"
     nav:
       header: "Test Guru Admin Panel"
     shared:
@@ -56,6 +71,9 @@ en:
       del_confirm: "Are you sure?"
       back: "Back"
       new_question: "New question"
+      badge: "Badge"
+      badges: "Badges"
+      status: "Status"      
     gists:
       index:
         header: "GitHub Gists"
@@ -132,3 +150,14 @@ en:
     create:
       success: "Your message has been sent to the administration"
       failure: "The message is not sent. An error occurred while sending"
+  badges:
+    index:
+      head: "Appointed badges"
+      title: "Title" 
+      image: "Image"
+      description: "Description"
+    my:
+      head: "My badges" 
+      rule: "Rule"
+      value: "Value"
+      first_attempt: "First attempt"

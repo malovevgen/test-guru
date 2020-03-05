@@ -1,0 +1,6 @@
+<h1><%= t('.header') %> <%=@badge.title %></h1>
+<%= image_tag("badges/#{@badge.image_name}", width:'100px') %>
+
+<%= render 'form' %>
+
+<%= link_to t('admin.shared.back'), admin_badges_path %>

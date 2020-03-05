@@ -1,0 +1,19 @@
+<h1><%= t('.head') %></h1>
+
+  <title>table-layout</title>
+  <style>
+   table {
+    width: 50%;
+   }
+  </style>
+
+<table>
+
+  <% current_user.badges.each do |badge| %>
+    <tr>
+      <td><%= image_tag("badges/#{Badge.find(badge.id).image_name}", width:'100px') %></td>
+    </tr>
+  <% end %>
+</table>     
+
+<%= link_to t('admin.shared.back'), tests_path %>
