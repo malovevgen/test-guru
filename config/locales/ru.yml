@@ -43,6 +43,8 @@ ru:
       show:
         test: "Тест"
         level: "Уровень"
+        timer: "Время на прохождение теста  в минутах : "
+        no_time_limit: "Без ограничения времени"
         new_question: "Создать вопрос"
         questions: "Перечень вопросов"
         edit_test: "Редактировать тест"
@@ -107,6 +109,7 @@ ru:
       category: "Категория"
       author: "Идентификатор автора "
       number: "Количество вопросов"
+      timer: "Таймер"
     feedback: 
       header: "Обратная связь"
   test_passages:

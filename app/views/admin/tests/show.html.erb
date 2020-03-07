@@ -8,6 +8,13 @@
   <%= @test.level %>
 </p>
 
+<p>
+  <strong><%= t('.timer') %></strong>
+  <%= @test.timer %>
+  <%= t('.no_time_limit') unless @test.timer  %>
+</p>
+
+
 <strong><%= t('.questions') %>:</strong>
 <table>
 <%= render partial: 'admin/questions/question', collection: @test.questions %>

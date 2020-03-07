@@ -43,6 +43,8 @@ en:
       show:
         test: "Test"
         level: "Level"
+        timer: "Time to complete the test in minutes"
+        no_time_limit: "No time limit"
         new_question: "Create question"
         questions: "Questions list"
         edit_test: "Edit test"
@@ -102,6 +104,7 @@ en:
       category: "Category"
       author: "The author ID"
       number: "Number of questions"
+      timer: "Timer"
     feedback:
       header: "Feedback"
   test_passages:
