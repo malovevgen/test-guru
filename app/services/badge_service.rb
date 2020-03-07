@@ -29,10 +29,6 @@ class BadgeService
     true_tests(badge).where(level: badge.value).pluck(:id).sort == Test.where(level: badge.value).pluck(:id).sort
   end
 
-  # def first_attempt(badge) # Бейдж выдается после прохождения всех тестов с первой попытки
-  #   true_tests(badge).pluck(:id).sort == Test.all.pluck(:id).sort && false_tests(badge).empty?
-  # end
-
   def first_attempt(badge) # Бейдж выдается после прохождения любого теста с первой попытки
     @test_passages.where(test_id: @test_passage.test_id).count == 1 && @test_passage.success == true
   end
@@ -40,10 +36,6 @@ class BadgeService
   def true_tests(badge)
     Test.where(id: actual_test_passages(badge).where(success: true).pluck(:test_id).uniq)
   end
-
-  # def false_tests(badge) # Используется если бейдж выдается после прохождения всех тестов с первой попытки
-  #  Test.where(id: actual_test_passages(badge).where("finality=true AND success=false").pluck(:test_id).uniq)
-  # end
 
   def actual_test_passages(badge)
     if @user.badges.ids.include?(badge.id)
