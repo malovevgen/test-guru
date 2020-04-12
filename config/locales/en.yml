@@ -120,6 +120,8 @@ en:
       from: "from "
       next: "Next question"
       percent: "Percentage of completed questions"
+    timer:
+      leftover: "You have to complete the test"  
     gist:
       success: "Gist was successfully created <a href='%{gist_url}' target='_blank'>Link</a>"
       failure: "An error occured while saving gist"

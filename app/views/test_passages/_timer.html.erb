@@ -1,1 +1,7 @@
-<h1>Test with timer</h1>
+<h2>
+  <%= t('.leftover') %>
+  <p id="demo"></p>
+  <script>
+    setTimer(<%= end_time.to_json.html_safe %>)
+  </script>
+</h2>
