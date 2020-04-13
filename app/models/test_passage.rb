@@ -9,7 +9,7 @@ class TestPassage < ApplicationRecord
   before_validation :before_validation_set_question, on: %i[create update]
 
   def completed?
-    current_question.nil?
+    over_time? || current_question.nil?
   end
 
   def total_questions
@@ -41,6 +41,19 @@ class TestPassage < ApplicationRecord
 
   def progress
     (((current_question_number - 1).to_f / total_questions) * 100).to_i
+  end
+
+  def over_time?
+
+    #return unless test.timer
+    test.timer && Time.now > end_time
+
+    #redirect_to result_test_passage_path(@test_passage)
+    #leftover.negative?
+  end
+
+  def end_time
+    created_at + test.timer.minutes
   end
 
   private

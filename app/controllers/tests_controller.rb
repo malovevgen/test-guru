@@ -10,7 +10,7 @@ class TestsController < ApplicationController
   end
 
   def start
-    current_user.tests << @test #takes only one argument and puts it at the end of the array
+    current_user.tests << @test
     redirect_to current_user.test_passage(@test)
   end
 
