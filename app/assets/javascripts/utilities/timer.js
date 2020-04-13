@@ -21,7 +21,7 @@ function setTimer(date) {
     document.getElementById("demo").innerHTML = minutes + " ' " + seconds + " '' ";
 
     // If the count down is finished, write some text
-    if (distance < 0) {
+    if (distance < 1) {
       clearInterval(x);
       form.submit();
     }
